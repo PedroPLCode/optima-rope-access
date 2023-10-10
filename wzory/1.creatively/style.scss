@@ -1,0 +1,822 @@
+/* Variables */
+
+/* Main colors */
+$color-one: #0097e6;
+$color-two: #27cca5;
+$color-three: #ff5252;
+$color-three-darker: #df2525;
+
+/* Text colors */
+$color-four: #ffffff;
+$color-five: #2c2c54;
+$color-six: #aaf8f2;
+
+/* Other */
+$transition: all 1s;
+
+/* Fonts */
+$font-inconsolata: 'Inconsolata', monospace;
+$font-signika: 'Signika', sans-serif;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-inconsolata;
+    color: $color-five;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+section {
+    padding: 96px 0;
+}
+
+/* Navigation */
+
+.navigation {
+    background-color: $color-one;
+    padding: 12px 0;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navigation ul li { 
+    display: inline-block;
+    margin: 0 36px 0 0;
+    position: relative;
+    font-weight: bold;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: $color-four;
+}
+
+.navigation ul li a:hover {
+    color: $color-two
+}
+
+.navigation ul ul li {
+    display: block;
+    margin: 0 0 12px 0;
+}
+
+.navigation ul li ul { 
+    display: none;
+    position: absolute;
+    background-color: $color-four;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+}
+
+.navigation ul li:hover ul { 
+    display: block;
+    text-align: center;
+}
+
+.navigation ul li ul a { 
+    color: $color-one;
+    background-color: $color-four;
+    display: block;
+    padding: 0 24px;
+}
+
+.navigation ul li ul a:hover { 
+    color: $color-two;
+}
+
+/* Splash */
+
+.splash {
+    background-color: $color-one;
+    color: $color-four;
+    min-height: 500px;
+    display: flex;
+}
+
+.splash-inner {
+    margin: auto;
+    max-width: 70%;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 72px;
+    word-spacing: -24px;
+    font-weight: 700; 
+    line-height: 1.2;
+}
+
+.page-title span {
+    font-family: $font-signika;
+}
+
+.page-subtitle {
+    margin: 24px 0;
+    font-size: 16px;
+    font-weight: 300; 
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: $font-inconsolata;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-color: inherit;
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: $transition;
+}
+
+.btn-one, .btn-six {
+    border-color: $color-four;
+    color: $color-four;
+    background-image: -webkit-linear-gradient(90deg, $color-four 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, $color-four 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, $color-four 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $color-four 50%, transparent 50%);
+}
+
+.btn-two {
+    border-color: $color-two;
+    color: $color-two;
+    background-image: -webkit-linear-gradient(90deg, $color-two 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, $color-two 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, $color-two 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $color-two 50%, transparent 50%);
+}
+
+.btn-three {
+    border-color: $color-three;
+    color: $color-three;
+    background-image: -webkit-linear-gradient(90deg, $color-three 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, $color-three 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, $color-three 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
+}
+
+.btn-four {
+    border-color: $color-one;
+    color: $color-one;
+    background-image: -webkit-linear-gradient(90deg, $color-one 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, $color-one 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, $color-one 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $color-one 50%, transparent 50%);
+}
+
+.btn-five {
+    border: none;
+    color: $color-one;
+    margin: 0 0 42px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.btn-one:hover, .btn-six:hover {
+    background-position: 0 100%;
+    color: $color-one;
+}
+
+.btn-two:hover, .btn-three:hover, .btn-four:hover {
+    background-position: 0 100%;
+    color: $color-four;
+}
+
+.btn-five:hover {
+    color: $color-five;
+}
+
+/* Our services */
+
+.our-services {
+    padding-bottom: 16px; 
+}
+.our-services h2 {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+
+.boxes-wrapper h2 {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+
+.boxes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boxes-wrapper p {
+    width: 100%;
+    text-align: justify;
+}
+
+.boxes-wrapper p:first-of-type {
+    font-weight: 900;
+}
+
+.single-box {
+    flex: 0 0 27.5%;
+    position: relative;
+}
+
+.number {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: -20px;
+    font-family: $font-signika;
+    font-size: 144px;
+    font-weight: 900;
+    color: $color-six;
+    line-height: 1;
+}
+
+/* Our work */
+
+.our-work-title {
+    font-size: 48px;
+    margin-top: 0px;
+}
+
+.our-work-single-box {
+    flex: 0 0 50%;
+    min-height: 300px;
+}
+
+.our-work ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.our-work ul li {
+    position: relative;
+    margin: 0 0 96px 0;
+}
+
+.image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    transition: $transition;
+}
+
+.image img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    object-fit: cover; 
+    position: center;  
+}
+
+.image::after {
+    content: "";
+    background-color: $color-one;
+    position: absolute;
+    width: 100%; 
+    max-width: 250px; 
+    height: 100%; 
+    opacity: 0.3; 
+    top: 20px;
+    left: 20px; 
+    transition: $transition;
+} 
+
+.image:hover::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.description {
+    position: absolute;
+    height: 100%;
+    padding: 36px 24px 36px 55%;
+    text-align: justify; 
+    overflow: hidden; 
+}
+
+.description h2 {
+    font-size: 24px;
+}
+
+.description p:first-of-type {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.description p:last-of-type {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+/* Contact */
+
+.contact {
+    background-color: $color-one;  
+    padding-top: 48px;  
+}
+
+.contact-title {
+    font-size: 48px;
+    color: $color-four;
+    margin-top: 0px;
+}
+
+form {
+    flex: 2 0 0;
+    padding-right: 96px;
+    background-color: $color-one;
+    color: $color-four;
+}
+
+form input, textarea {
+    width: 100%;
+    line-height: 2;
+    background-color: $color-one;
+    color: $color-four;
+    border: none;
+    border-bottom: 3px solid $color-four;
+    outline: 0;
+}
+
+::placeholder {
+    color: $color-four;
+    opacity: 1;
+}
+
+.contact-data {
+    flex: 1 0 0;
+    color: $color-four;
+    line-height: 0.5;
+}
+
+.data-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Footer */
+
+.page-footer {
+    background-color: $color-four;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: table;
+}
+
+.page-footer ul {
+    list-style-type: none;
+    padding: 20px;
+    justify-content: center;
+}
+
+.page-footer ul li {
+    display: inline-block;
+}
+
+.page-footer ul li a {
+    font-size: 0;
+}
+
+.page-footer ul li i {
+    background-color: $color-three;
+    color: $color-four;
+    font-size: 30px;
+    width: 60pX;
+    height: 60pX;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 60px;
+    transition: $transition;
+}
+
+.page-footer ul li i:hover {
+    transform: scale(1.2);
+    background-color: $color-three-darker;
+}
+
+/* Media */
+
+/* Very small screens */
+
+@media (max-width: 330px) {
+    
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    section {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .page-title {
+        font-size: 52px;
+    }
+        
+    .boxes-wrapper {
+        flex-direction: column;
+    }
+    
+    .single-box {
+        margin: 48px 10%;
+    }
+    
+    .single-box p:last-of-type {
+        width: 100%;
+    }
+    
+    .our-work-single-box {
+        height: 300px;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .image {
+        width: 100%;
+        position: relative;
+        margin: 0 auto 20px auto;
+    }
+    
+    .image::after {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .description {
+        max-width: 100%;
+        position: relative;
+        padding: 20px 25% 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .description h2, .description p {
+        margin: auto;
+        left: 0;
+        width: 140%;
+    }
+    
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navigation ul li {
+        margin: 0 8px 0 0;
+        font-weight: bold;
+    }
+    
+    .single-box {
+        margin-bottom: 24px;
+    }
+    
+    .contact-form {
+        display: inline-block;
+        justify-content: center;
+        padding: 0 10%;
+    }
+    
+    .contact-data {
+        display: inline-block; 
+        justify-content: center;
+        padding: 48px 10%;
+    }
+    
+    .contact-data p {
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .container {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .container > h2 {
+        font-size: 36px;
+        margin: 0px auto;
+    }
+    
+    .our-services-title {
+        padding-top: 52px;
+    }
+    
+    .our-work-title {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .our-work ul li {
+        margin: 0 0 36px 0;
+    }
+    
+    .contact-title {
+        padding-top: 0px;
+        padding-bottom: 36px;
+        padding-left: 10%;
+    }
+    
+    }
+
+/* Standard screens */
+
+@media (min-width: 331px) and (max-width: 767px) {
+    
+body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.page-title {
+    font-size: 52px;
+}
+    
+.boxes-wrapper {
+    flex-direction: column;
+}
+
+.single-box {
+    margin: 48px 10%;
+}
+
+.single-box p:last-of-type {
+    width: 100%;
+}
+
+.our-work-single-box {
+    height: 300px;
+    max-width: 100%;
+    display: block;
+}
+
+.our-work ul li {
+    margin: 0 0 36px 0;
+}
+
+.image {
+    width: 100%;
+    position: relative;
+    margin: 0 auto 20px auto;
+}
+
+.image::after {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    max-width: 100%;
+    position: relative;
+    padding: 20px 25% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description h2, .description p {
+    margin: auto;
+    left: 0;
+    width: 140%;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul li {
+    margin: 0 12px 0 0;
+    font-weight: bold;
+}
+
+.single-box {
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: inline-block;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.contact-data {
+    display: inline-block; 
+    justify-content: center;
+    padding: 48px 10%;
+}
+
+.contact-data p {
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.container > h2 {
+    font-size: 36px;
+    margin: 0px auto;
+}
+
+.our-services-title {
+    padding-top: 52px;
+}
+
+.our-work-title {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.contact-title {
+    padding-top: 0px;
+    padding-bottom: 36px;
+    padding-left: 10%;
+}
+
+}
+
+/* Bigger screens */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.page-title {
+    font-size: 52px;
+}
+    
+.boxes-wrapper {
+    flex-direction: column;
+}
+
+.single-box {
+    margin: 48px 10%;
+}
+
+.single-box p:last-of-type {
+    width: 100%;
+}
+
+.our-work-single-box {
+    height: 300px;
+    max-width: 100%;
+    display: block;
+}
+
+.image {
+    width: 100%;
+    position: relative;
+    margin: 0 auto 20px auto;
+}
+
+.image::after {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    max-width: 100%;
+    position: relative;
+    padding: 20px 25% 36px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description h2, .description p {
+    margin: auto;
+    left: 0;
+    width: 170%;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul li {
+    margin: 0 12px 0 0;
+    font-weight: bold;
+}
+
+.single-box {
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: inline-block;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.contact-data {
+    display: inline-block; 
+    justify-content: center;
+    padding: 48px 10%;
+}
+
+.contact-data p {
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.container > h2 {
+    font-size: 36px;
+    margin: 0px auto;
+}
+
+.our-services-title {
+    padding-top: 52px;
+}
+
+.our-work-title {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.contact-title {
+    padding-top: 0px;
+    padding-bottom: 36px;
+    padding-left: 10%;
+}
+
+}
