@@ -1,0 +1,80 @@
+@import './settings.scss';
+
+.header-wrapper {
+  max-width: 520px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  nav {
+    width: 100%;
+    .book-now {
+      border-left: $base-size solid black;
+      h2 {
+        padding-left: $base-size;
+        color: black;
+        transition: $transition;
+        &:hover {
+          cursor: pointer;
+          color: brown;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      text-align: center;
+      color: black;
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    ul {
+      color: black;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      list-style-position: outside;
+      margin: 0;
+      padding: 0;
+      li {
+        width: 33.333%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        a {
+          color: black;
+          width: 100%;
+          text-align: center;
+          font-size: $base-size * 4;
+          transition: $transition;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+

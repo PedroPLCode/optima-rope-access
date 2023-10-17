@@ -1,0 +1,52 @@
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+/* Section One */
+.boxes-wrapper {
+  max-width: 520px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+.boxes-wrapper h2 {
+  font-size: 44px;
+  margin: 0 0 12px 0;
+}
+.boxes-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  transition: all 1s;
+}
+.boxes-wrapper div:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.boxes-wrapper div:first-of-type {
+  width: 100%;
+}
+.boxes-wrapper div:nth-of-type(2) {
+  width: 256px;
+}
+.boxes-wrapper div:nth-of-type(3) {
+  width: 256px;
+}
+.boxes-wrapper div:nth-of-type(4) {
+  width: 168px;
+}
+.boxes-wrapper div:nth-of-type(5) {
+  width: 168px;
+}
+.boxes-wrapper div:last-of-type {
+  width: 168px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3Mvc2VjdGlvbi1vbmUuc2NzcyIsInNlY3Rpb24tb25lLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxjQUFBO0FBRUEsZ0JBQUE7QUFFQSxnQkFBQTtBQUVBLFVBQUE7QUFHQSxVQUFBO0FBR0EsVUFBQTtBQ1ZBLGdCQUFBO0FBRUE7RUFDRSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLFFESlU7RUNLViw4QkFBQTtBQ0lGO0FERkU7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7QUNJSjtBRERFO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCRGRTO0FFaUJiO0FEQUU7RUFDRSxlQUFBO0VBQ0EsWUFBQTtBQ0VKO0FEQ0U7RUFDRSxXQUFBO0FDQ0o7QURFRTtFQUNFLFlBQUE7QUNBSjtBREdFO0VBQ0UsWUFBQTtBQ0RKO0FESUU7RUFDRSxZQUFBO0FDRko7QURLRTtFQUNFLFlBQUE7QUNISjtBRE1FO0VBQ0UsWUFBQTtBQ0pKIiwiZmlsZSI6InNlY3Rpb24tb25lLmNzcyJ9 */
