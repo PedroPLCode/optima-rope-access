@@ -1,15 +1,22 @@
+@import './typography.scss';
+
 /* Variables */
 
 /* Main colors */
+$color-white: white;
+$color-one: #0F555F;
+$color-two: #DFC499;
+$color-three: #0A2A4B;
 
 /* Text colors */
+$color-text: #0F555F;
 
 /* Sizes */
 $base-size: 8px;
+$base-width: 780px;
 
 /* Other */
 $transition: all 1s;
 
 /* Fonts */
-$font-inconsolata: 'Inconsolata', monospace;
-$font-signika: 'Signika', sans-serif;
+$font-athena: 'Athena';

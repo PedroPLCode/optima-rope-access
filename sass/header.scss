@@ -1,7 +1,7 @@
 @import './settings.scss';
 
 .header-wrapper {
-  max-width: 520px;
+  max-width: $base-width;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -12,30 +12,36 @@
   nav {
     width: 100%;
     .book-now {
-      border-left: $base-size solid black;
+      margin-left: ($base-size * 4);
+      border-left: ($base-size / 2) solid $color-text;
+      height: ($base-size * 22);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
       h2 {
         padding-left: $base-size;
-        color: black;
+        color: $color-text;
         transition: $transition;
         &:hover {
           cursor: pointer;
-          color: brown;
+          color: $color-two;
         }
       }
     }
   }
 
   .logo {
-    width: 100%;
-    height: auto;
+    width: 85%;
+    height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h1 {
-      text-align: center;
-      color: black;
-    }
+    background-image: url(../images/Logo_Z_lasu_ceramika_duze.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 
   footer {
@@ -43,7 +49,7 @@
     height: auto;
     bottom: 0;
     ul {
-      color: black;
+      color: $color-text;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -59,17 +65,18 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         a {
-          color: black;
-          width: 100%;
+          color: $color-text;
+
           text-align: center;
           font-size: $base-size * 4;
           transition: $transition;
           &:hover {
             cursor: pointer;
             transform: scale(1.2);
+            color: $color-three;
           }
         }
       }
@@ -78,3 +85,16 @@
 }
 
 
+/* Media */
+
+@media (max-width: 330px) {
+  a {
+    font-size: $base-size * 2;
+  }
+}
+
+@media (min-width: 331px) and (max-width: 720px) {
+  a {
+    font-size: $base-size * 2;
+  }
+}
