@@ -85,16 +85,33 @@
 }
 
 
+
 /* Media */
 
-@media (max-width: 330px) {
-  a {
-    font-size: $base-size * 2;
+@media (max-width: 419px) {
+  .header-wrapper {
+    footer {
+      ul {
+        li {
+          a {
+            font-size: $base-size * 2.5;
+          }
+        }
+      }
+    }
   }
 }
 
-@media (min-width: 331px) and (max-width: 720px) {
-  a {
-    font-size: $base-size * 2;
+@media (min-width: 420px) and (max-width: 500px) {
+  .header-wrapper {
+    footer {
+      ul {
+        li {
+          a {
+            font-size: $base-size * 3;
+          }
+        }
+      }
+    }
   }
 }

@@ -9,13 +9,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: $base-size;
+  gap: 1%;
   justify-content: space-between;
-
-  h2 {
-    font-size: 44px;
-    margin: 0 0 12px 0;
-  }
 
   div {
     height: 33vh;
@@ -43,7 +38,7 @@
   }
 
   div:nth-of-type(2) {
-    width: 49%;
+    width: 49.5%;
     background-image: url(../images/fwewet.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -51,22 +46,22 @@
   }
 
   div:nth-of-type(3) {
-    width: 49%;
+    width: 49.5%;
     background-color: $color-one;
   }
 
   div:nth-of-type(4) {
-    width: 31.8%;
+    width: 32.5%;
     background-color: $color-two;
   }
 
   div:nth-of-type(5) {
-    width: 31.8%;
+    width: 32.5%;
     background-color: $color-three;
   }
 
   div:last-of-type {
-    width: 31.8%;
+    width: 32.5%;
     background-image: url(../images/str2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -77,19 +72,39 @@
 
 
 /* Media */
+
+@media (max-width: 420px) {
+  .boxes-wrapper {
+    div {
+      h2 {
+        font-size: $base-size * 2.5;
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 355px) {
+  .boxes-wrapper {
+      div:nth-of-type(2), div:nth-of-type(3) {
+        width: 48%;
+      }
+      div:nth-of-type(4), div:nth-of-type(4), div:last-of-type {
+    width: 30.5%;
+    }
+  }
+}
+
+@media (min-width: 356px) and (max-width: 720px) {
+  .boxes-wrapper {
+      div:nth-of-type(2), div:nth-of-type(3) {
+        width: 49%;
+      }
+      div:nth-of-type(4), div:nth-of-type(4), div:last-of-type {
+    width: 32%;
+    }
+  }
+}
 /*
-@media (max-width: 330px) {
-  .boxes-wrapper {
-    max-width: 330px;
-  }
-}
-
-@media (min-width: 331px) and (max-width: 360px) {
-  .boxes-wrapper {
-    max-width: 331px;
-  }
-}
-
 @media (min-width: 361px) and (max-width: 390px) {
   .boxes-wrapper {
     max-width: 361px;
