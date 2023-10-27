@@ -2,35 +2,28 @@
 
 /* Section One */
 
-.boxes-wrapper {
-  max-width: $base-width;
+.grid-wrapper {
+
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1%;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 16.666% 16.666% 16.666% 16.666% 16.666% 16.666%;
+  grid-template-rows: 25% 25% 25% 25%;
+/*  grid-gap: $base-size;
+  gap: $base-size; */
 
   div {
-    height: 33vh;
     color: $color-white;
+    border: ($base-size / 2) solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: $transition;
-    h2 {
-      font-size: $base-size * 3;
-    }
-  }
-
-  div:hover {
-    cursor: pointer;
-    opacity: 0.3;
   }
 
   div:first-of-type {
-    width: 100%;
+    grid-column: 1 / span 6;
+    grid-row: 1 / 3;
     background-image: url(../images/str22.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -38,7 +31,8 @@
   }
 
   div:nth-of-type(2) {
-    width: 49.5%;
+    grid-column: 1 / span 3;
+    grid-row: 3;
     background-image: url(../images/fwewet.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -46,22 +40,47 @@
   }
 
   div:nth-of-type(3) {
-    width: 49.5%;
+    grid-column: 4 / span 3;
+    grid-row: 3;
     background-color: $color-one;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.3;
+    }
+    h2 {
+      font-size: $base-size * 3;
+    }
   }
 
   div:nth-of-type(4) {
-    width: 32.5%;
+    grid-column: 1 / span 2;
+    grid-row: 4;
     background-color: $color-two;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.3;
+    }
+    h2 {
+      font-size: $base-size * 3;
+    }
   }
 
   div:nth-of-type(5) {
-    width: 32.5%;
+    grid-column: 3 / span 2;
+    grid-row: 4;
     background-color: $color-three;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.3;
+    }
+    h2 {
+      font-size: $base-size * 3;
+    }
   }
 
   div:last-of-type {
-    width: 32.5%;
+    grid-column: 5 / span 2;
+    grid-row: 4;
     background-image: url(../images/str2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -74,7 +93,7 @@
 /* Media */
 
 @media (max-width: 420px) {
-  .boxes-wrapper {
+  .grid-wrapper {
     div {
       h2 {
         font-size: $base-size * 2.5;
@@ -82,7 +101,7 @@
     }
   }
 }
-
+/*
 @media (min-width: 300px) and (max-width: 355px) {
   .boxes-wrapper {
       div:nth-of-type(2), div:nth-of-type(3) {
@@ -104,7 +123,7 @@
     }
   }
 }
-/*
+
 @media (min-width: 361px) and (max-width: 390px) {
   .boxes-wrapper {
     max-width: 361px;

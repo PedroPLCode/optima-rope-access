@@ -1,7 +1,7 @@
 @import './settings.scss';
 
 .header-wrapper {
-  max-width: $base-width;
+
   width: 100%;
   height: 100vh;
   display: flex;
@@ -10,7 +10,12 @@
   justify-content: space-between;
 
   nav {
+    border: 2px solid red;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     .book-now {
       margin-left: ($base-size * 4);
       border-left: ($base-size / 2) solid $color-text;
@@ -109,6 +114,20 @@
         li {
           a {
             font-size: $base-size * 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 501px) {
+  .header-wrapper {
+    footer {
+      ul {
+        li {
+          a {
+            display: none;
           }
         }
       }
