@@ -8,6 +8,9 @@ git remote add
 - links,
 - gallery, products,
 - rwd,
+- hover po id.
+- img srcset, wymiary.
+- env()
 
 Do Kasi:
 - jaka to czcionka?
