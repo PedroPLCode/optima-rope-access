@@ -25,7 +25,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 1s;
 }
 .grid-wrapper div img {
   flex-shrink: 0;
@@ -39,10 +38,12 @@
 .grid-wrapper [id*=hover] {
   color: white;
   font-size: 20px;
+  transition: opacity 1s;
 }
 .grid-wrapper [id*=hover]:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 50%;
+  /* animation: pulse 2s 2s infinite alternate both; */
 }
 .grid-wrapper div:first-of-type {
   grid-column: 1/7;
@@ -72,13 +73,22 @@
   grid-row: 4;
 }
 
+@keyframes pulse {
+  100% {
+    opacity: 5%;
+  }
+}
 /* Media */
 @media (max-width: 601px) {
   .grid-wrapper div h2 {
     font-size: 5vw;
   }
 }
-/*
+/* orientation
+    pointer: coarse / fine
+    hover: none
+
+    @supports display grid
 
 @media (max-width: 420px) {
   .grid-wrapper {
@@ -203,4 +213,4 @@
 }
 */
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3Rpb24tb25lLmNzcyIsIi4uL3Nhc3MvdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9zZXR0aW5ncy5zY3NzIiwiLi4vc2Fzcy9zZWN0aW9uLW9uZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLHFCQUFBO0VBQ0EsMkRBQUEsRUFBQSxrREFBQTtBREVGO0FFRkEsY0FBQTtBQUVBLGdCQUFBO0FBTUEsZ0JBQUE7QUFHQSxVQUFBO0FBSUEsVUFBQTtBQUdBLFVBQUE7QUNsQkEsZ0JBQUE7QUFFQTtFQUVFLHFDQUFBO0VBRUEsV0FBQTtFQUNBLGFBQUE7RUFDQSxhQUFBO0VBQ0EsK0RBQUE7RUFDQSw4Q0FBQTtFQUNBLGFEQ1U7RUNBVixRQUFBO0FIT0Y7QUdMRTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkRIUztBRlViO0FHTkk7RUFDRSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FIUU47QUdKRTtFQUNFLFlEN0JVO0VDOEJWLGVBQUE7QUhNSjtBR0xJO0VBQ0UsZUFBQTtFQUNBLFlBQUE7QUhPTjtBR0hFO0VBQ0UsZ0JBQUE7RUFDQSxhQUFBO0FIS0o7QUdGRTtFQUNFLGdCQUFBO0VBQ0EsV0FBQTtBSElKO0FHREU7RUFDRSxnQkFBQTtFQUNBLFdBQUE7RUFDQSx5QkRqRFE7QUZvRFo7QUdBRTtFQUNFLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLHlCRHREUTtBRndEWjtBR0NFO0VBQ0UsZ0JBQUE7RUFDQSxXQUFBO0VBQ0EseUJEM0RVO0FGNERkO0FHRUU7RUFDRSxnQkFBQTtFQUNBLFdBQUE7QUhBSjs7QUdNQSxVQUFBO0FBRUE7RUFHTTtJQUNFLGNBQUE7RUhOTjtBQUNGO0FHV0E7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztDQUFBIiwiZmlsZSI6InNlY3Rpb24tb25lLmNzcyJ9 */
+/*# sourceMappingURL=section-one.css.map */

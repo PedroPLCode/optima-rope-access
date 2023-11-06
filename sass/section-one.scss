@@ -19,7 +19,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: $transition;
     img {
       flex-shrink: 0;
       max-width: 100%;
@@ -34,9 +33,11 @@
   [id*='hover'] {
     color: $color-white;
     font-size: $base-size * 2.5;
+    transition: opacity 1s;
     &:hover {
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 50%;
+      /* animation: pulse 2s 2s infinite alternate both; */
     }
   }
 
@@ -74,6 +75,12 @@
   }
 }
 
+@keyframes pulse {
+  100% {
+    opacity: 5%;
+  }
+}
+
 
 
 /* Media */
@@ -88,7 +95,11 @@
   }
 }
 
-/*
+/* orientation
+    pointer: coarse / fine
+    hover: none
+
+    @supports display grid
 
 @media (max-width: 420px) {
   .grid-wrapper {
