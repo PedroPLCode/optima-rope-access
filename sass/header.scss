@@ -17,7 +17,7 @@
     justify-content: space-between;
     .book-now {
       margin-left: ($base-size * 4);
-      border-left: ($base-size / 2) solid $color-text;
+      border-left: (calc($base-size / 2)) solid $color-text;
       height: ($base-size * 22);
       display: flex;
       flex-direction: row;

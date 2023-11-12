@@ -1,14 +1,26 @@
-const menuButton = document.querySelector('.menu__btn');
-const navLinks = document.querySelectorAll('.menu__item');
+const settings = {
+  selectors: {
+    menuButton: '.menu__btn',
+    menuBox: '.menu__box',
+    menuItem: '.menu__item',
+  },
+  classes: {
+    active: 'active',
+  }
+}
+
+const menuButton = document.querySelector(settings.selectors.menuButton);
+const menuBox = document.querySelector(settings.selectors.menuBox);
+const navLinks = document.querySelectorAll(settings.selectors.menuItem);
+
 for (let navLink of navLinks) {
-  document.addEventListener( 'click', (event) => {
-    const menuBox = document.querySelector('.menu__box');
-    if (event.target == navLink || event.target == menuButton) {
-      menuButton.classList.toggle('active')
-      menuBox.classList.toggle('active');
-    } else {
-      menuBox.classList.remove('active');
-      menuButton.classList.toggle('active')
+  document.addEventListener( 'click', event => {
+    if (event.target == menuButton) {
+      menuButton.classList.toggle(settings.classes.active);
+      menuBox.classList.toggle(settings.classes.active);
+    } else if (event.target == navLink || (event.target != menuBox)) {
+      menuButton.classList.remove(settings.classes.active);
+      menuBox.classList.remove(settings.classes.active);
     }
   });
 }

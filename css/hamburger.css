@@ -1,17 +1,70 @@
-/* Error: Undefined variable.
- *    ,
- * 15 |   transition: $transition;
- *    |               ^^^^^^^^^^^
- *    '
- *   sass/hamburger.scss 15:15  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 15 \2502    transition: $transition;\a    \2502                ^^^^^^^^^^^\a    \2575 \a   sass/hamburger.scss 15:15  root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 0;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn {
+  transition: all 1s;
+}
+.menu__btn:hover {
+  opacity: 75%;
+  transform: scale(1.2);
+}
+.menu__btn.active {
+  transform: scale(0.5);
+  opacity: 0%;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  opacity: 75%;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
+}
+.menu__box.active {
+  left: 0 !important;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhhbWJ1cmdlci5jc3MiLCIuLi9zYXNzL3R5cG9ncmFwaHkuc2NzcyIsIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3MvaGFtYnVyZ2VyLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0UscUJBQUE7RUFDQSwyREFBQSxFQUFBLGtEQUFBO0FERUY7QUVGQSxjQUFBO0FBRUEsZ0JBQUE7QUFPQSxnQkFBQTtBQUdBLFVBQUE7QUFJQSxVQUFBO0FBSUEsVUFBQTtBQ3BCQTtFQUNFLFVBQUE7QUhVRjs7QUdQQTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7RUFDQSxVQUFBO0FIVUY7O0FHUEE7RUFDRSxrQkRJVztBRk1iO0FHVEU7RUFDRSxZQUFBO0VBQ0EscUJBQUE7QUhXSjtBR1RFO0VBQ0UscUJBQUE7RUFDQSxXQUFBO0FIV0o7O0FHUkE7RUFDRSxjQUFBO0VBQ0EsZUFBQTtFQUNBLE1BQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsMENBQUE7RUFDQSwwQkFBQTtBSFdGO0FHVkU7RUFDRSxrQkFBQTtBSFlKOztBR1RBO0VBQ0UsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGlDQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EscUJBQUE7RUFDQSwwQkFBQTtBSFlGOztBR1ZBO0VBQ0UseUJBQUE7QUhhRiIsImZpbGUiOiJoYW1idXJnZXIuY3NzIn0= */

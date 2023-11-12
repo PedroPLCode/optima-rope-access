@@ -1,3 +1,5 @@
+@import './settings.scss';
+
 #menu__toggle {
   opacity: 0;
 }
@@ -5,7 +7,6 @@
 .menu__btn {
   position: fixed;
   top: 0;
-  transform: translateX(-156px);
   font-size: 32px;;
   cursor: pointer;
   z-index: 1;
