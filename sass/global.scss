@@ -17,6 +17,10 @@ body {
   font-family: $font-athena;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   display: flex;
   max-width: $base-width;
