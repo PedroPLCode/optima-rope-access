@@ -7,20 +7,34 @@
 .menu__btn {
   position: fixed;
   top: 0;
+  transform: translateX(-156px);
   font-size: 32px;;
   cursor: pointer;
   z-index: 1;
+
+  @media (max-width: 601px) {
+    transform: translateX(-90px);
+  }
 
 }
 .menu__btn {
   transition: $transition;
   &:hover {
     opacity: 75%;
-    transform: scale(1.2);
+    transform: translateX(-156px) scale(1.2);
+
+    @media (max-width: 601px) {
+      transform: translateX(-90px);
+    }
   }
   &.active {
-    transform: scale(.5);
+    transform: translateX(-156px) scale(.5);
     opacity: 0%;
+
+    @media (max-width: 601px) {
+      transform: translateX(-90px) scale(.5);
+      opacity: 0%;
+    }
   }
 }
 .menu__box {

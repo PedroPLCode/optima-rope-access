@@ -73,10 +73,14 @@
         align-items: center;
         a {
           color: $color-text;
-
           text-align: center;
           font-size: $base-size * 4;
           transition: $transition;
+
+          @media (max-width: 601px) {
+            font-size: $base-size * 3;
+          }
+
           &:hover {
             cursor: pointer;
             transform: scale(1.2);
