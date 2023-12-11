@@ -1,7 +1,1 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "Athena";
-  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInR5cG9ncmFwaHkuY3NzIiwiLi4vc2Fzcy90eXBvZ3JhcGh5LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0UscUJBQUE7RUFDQSwyREFBQSxFQUFBLGtEQUFBO0FERUYiLCJmaWxlIjoidHlwb2dyYXBoeS5jc3MifQ== */
+@font-face{font-family:"Athena";src:url("../vendor/Athena-Regular.ttf") format("truetype")}

@@ -3,11 +3,9 @@
 /* Variables */
 
 /* Main colors */
-$color-white: white;
 $color-one: #0F555F;
 $color-two: #DFC499;
 $color-three: #0A2A4B;
-$color-test: rgba(4, 22, 34, 0.2);
 
 /* Text colors */
 $color-text: #0F555F;
@@ -17,8 +15,8 @@ $base-size: 8px;
 $base-width: 780px;
 
 /* Other */
-$transition: all 1s;
+$transition-time: 1s;
 
 
 /* Fonts */
-$font-athena: 'Athena';
+$font-athena: 'Arial';
