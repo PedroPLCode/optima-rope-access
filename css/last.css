@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+.last {
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.last .last-wrapper {
+  width: 100%;
+}
+.last .last-wrapper h3, .last .last-wrapper h4 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxhc3QuY3NzIiwiLi4vc2Fzcy90eXBvZ3JhcGh5LnNjc3MiLCIuLi9zYXNzL3NldHRpbmdzLnNjc3MiLCIuLi9zYXNzL2xhc3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDRSxxQkFBQTtFQUNBLDJEQUFBLEVBQUEsa0RBQUE7QURFRjtBRUZBLGNBQUE7QUFFQSxnQkFBQTtBQUtBLGdCQUFBO0FBR0EsVUFBQTtBQU1BLFVBQUE7QUFJQSxVQUFBO0FDcEJBO0VBQ0UsYUFBQTtFQUNBLGlERFlpQjtFQ1hqQiwyQkFBQTtFQUNBLHNCQUFBO0FIVUY7QUdSRTtFQUNFLFdBQUE7QUhVSjtBR1JJO0VBQ0Usa0JBQUE7QUhVTiIsImZpbGUiOiJsYXN0LmNzcyJ9 */

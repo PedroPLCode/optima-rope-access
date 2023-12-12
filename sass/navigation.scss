@@ -1,0 +1,99 @@
+@import './settings.scss';
+
+.navigation {
+  width: 100%;
+  height: calc($base-size * 8);
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-one;
+
+  .navigation-wrapper {
+    width: $base-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+
+  .logo {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: $color-two;
+    }
+  }
+
+  .navigation-links {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    gap: calc($base-size * 4);
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      position: relative;
+      font-weight: bold;
+
+      a {
+        color: $color-two;
+        transition-duration: $transition-time;
+        transition-property: color;
+
+        &:hover {
+          color: $color-three;
+        }
+      }
+
+      ul {
+        display: none;
+        width: 96px;
+        position: absolute;
+        background-color: $color-two;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 12px;
+        transition-duration: calc($transition-time / 2);
+        transition-property: opacity, transform;
+
+        li {
+          margin: auto;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0 12px 0;
+
+          a {
+            display: block;
+            padding: 0 24px;
+            color: $color-one;
+            text-align: center;
+
+            &:hover {
+              color: $color-three;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2):hover ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* opacity: 1;
+        transform: scale(1); */
+      }
+    }
+  }
+}
+}

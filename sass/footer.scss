@@ -1,0 +1,26 @@
+@import './settings.scss';
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+
+  .footer-wrapper {
+    width: $base-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .arrow-up {
+
+      a {
+
+        i {
+          color: $color-one;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+.footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+.footer .footer-wrapper {
+  width: 1148px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.footer .footer-wrapper .arrow-up a i {
+  color: #100e7c;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvb3Rlci5jc3MiLCIuLi9zYXNzL3R5cG9ncmFwaHkuc2NzcyIsIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3MvZm9vdGVyLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0UscUJBQUE7RUFDQSwyREFBQSxFQUFBLGtEQUFBO0FERUY7QUVGQSxjQUFBO0FBRUEsZ0JBQUE7QUFLQSxnQkFBQTtBQUdBLFVBQUE7QUFNQSxVQUFBO0FBSUEsVUFBQTtBQ3BCQTtFQUNFLFdBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtBSFVGO0FHUkU7RUFDRSxhRE1TO0VDTFQsYUFBQTtFQUNBLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxxQkFBQTtBSFVKO0FHSlE7RUFDRSxjRGRFO0VDZUYsaUJBQUE7QUhNViIsImZpbGUiOiJmb290ZXIuY3NzIn0= */

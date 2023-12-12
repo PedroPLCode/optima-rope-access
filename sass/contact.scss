@@ -1,0 +1,45 @@
+@import './settings.scss';
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  transition-duration: $transition-time;
+  transition-property: all;
+  &.active {
+
+  }
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  opacity: 75%;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: $transition-time;
+  transition-property: all;
+  &.active {
+    left: 0 !important;
+  }
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
