@@ -1,28 +1,55 @@
 const settings = {
   selectors: {
-    menuButton: '.menu__btn',
-    menuBox: '.menu__box',
-    menuItem: '.menu__item',
+    contactButton: '.contact__btn',
+    contactBox: '.contact__box',
+    imagesBox: '.images',
+    image: 'img',
   },
   classes: {
-    active: 'active',
+    boxActive: 'box__active',
+    buttonActive: 'button__active',
+    imageActive: 'image__active',
   }
 }
 
-const menuButton = document.querySelector(settings.selectors.menuButton);
-const menuBox = document.querySelector(settings.selectors.menuBox);
-const navLinks = document.querySelectorAll(settings.selectors.menuItem);
+const contactButton = document.querySelector(settings.selectors.contactButton);
+const contactBox = document.querySelector(settings.selectors.contactBox);
 
-for (let navLink of navLinks) {
-  document.addEventListener( 'click', event => {
-    if (event.target == menuButton) {
-      event.preventDefault();
-      menuButton.classList.toggle(settings.classes.active);
-      menuBox.classList.toggle(settings.classes.active);
-      console.log('klik')
-    } else if (event.target == navLink || (event.target != menuBox)) {
-      menuButton.classList.remove(settings.classes.active);
-      menuBox.classList.remove(settings.classes.active);
+const imagesBox = document.querySelector(settings.selectors.imagesBox);
+const images = document.querySelectorAll(settings.selectors.image);
+
+document.addEventListener( 'click', event => {
+  if (event.target == contactButton) {
+    event.preventDefault();
+    contactButton.classList.toggle(settings.classes.buttonActive);
+    contactBox.classList.toggle(settings.classes.boxActive);
+  } /* else if (event.target != contactBox && event.target != contactBox.children) {
+    contactButton.classList.remove(settings.classes.buttonActive);
+    contactBox.classList.remove(settings.classes.boxActive);
+  } */
+  for (let singleImage of images) {
+    const imagesBoxRect = imagesBox.getBoundingClientRect();
+    if (event.target == singleImage) {
+      //event.preventDefault();
+      if (!singleImage.classList.contains(settings.classes.imageActive)) {
+        singleImage.style.height = `${window.innerHeight / 1.5}px`;
+        singleImage.style.width = `auto`;
+        singleImage.style.top = `${window.top}`
+        singleImage.style.transform = `translateX(-${imagesBoxRect.width}px)`;
+        singleImage.classList.add(settings.classes.imageActive);
+      } else {
+        singleImage.style.height = '100%';
+        singleImage.style.width = `100%`;
+        singleImage.style.transform = ``;
+        singleImage.classList.remove(settings.classes.imageActive);
+      }
+
+    } else if (event.target != singleImage) {
+      //event.preventDefault();
+      singleImage.classList.remove(settings.classes.imageActive);
     }
-  });
-}
+  }
+});
+
+
+

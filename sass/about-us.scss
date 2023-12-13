@@ -1,4 +1,5 @@
 @import './settings.scss';
+@import './keyframes.scss';
 
 .about-us {
   height: 100vh;
@@ -10,10 +11,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: $base-size;
 
     .description {
       height: 100%;
-      width: 60%;
+      width: 60rem;
 
       h3 {
         text-align: center;
@@ -36,16 +38,16 @@
 
     .images {
       height: 65vh;
-      width: 40%;
-      display: grid;
-      grid-template-columns: repeat(2, .5fr);
-      grid-template-rows: repeat(3, .333fr);
-      gap: $base-size;
+      width: 40rem;
+      border-radius: $base-size;
+      animation: background_change 12s infinite both;
+      background-position: center;
+      background-size: cover;
 
       div {
         height: 100%;
         width: 100%;
-        background-image: $background-image;
+        background-image: $background-image-2;
         background-position: center;
         background-size: cover;
         border-radius: $base-size;

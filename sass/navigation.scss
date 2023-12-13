@@ -4,6 +4,7 @@
   width: 100%;
   height: calc($base-size * 8);
   top: 0;
+  z-index: 10;
   position: fixed;
   display: flex;
   flex-direction: row;

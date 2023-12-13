@@ -4,19 +4,19 @@
   opacity: 0;
 }
 
-.menu__btn {
+.contact__btn {
   transition-duration: $transition-time;
-  transition-property: all;
-  &.active {
-
+  transition-property: filter;
+  &.button__active {
+    filter: blur(4px);
   }
 }
-.menu__box {
+.contact__box {
   display: block;
   position: fixed;
   top: 0;
   opacity: 75%;
-  left: 0;
+  left: -300px;
   width: 300px;
   height: 100%;
   margin: 0;
@@ -26,20 +26,7 @@
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: $transition-time;
   transition-property: all;
-  &.active {
+  &.box__active {
     left: 0 !important;
   }
-}
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-.menu__item:hover {
-  background-color: #CFD8DC;
 }
