@@ -9,36 +9,90 @@
 /* Sizes */
 /* Other */
 /* Fonts */
+/*
 #menu__toggle {
   opacity: 0;
 }
-
+*/
 .contact__btn {
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-property: filter;
 }
-.contact__btn.button__active {
-  filter: blur(4px);
-}
-
 .contact__box {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 32px;
   position: fixed;
   top: 0;
   opacity: 75%;
-  left: -300px;
-  width: 300px;
+  right: -348px;
+  width: 348px;
   height: 100%;
   margin: 0;
-  padding: 80px 0;
+  padding: 80px 32px;
   list-style: none;
-  background-color: #ECEFF1;
+  background-color: #100e7c;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-property: all;
 }
+.contact__box .close__btn {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contact__box .close__btn i {
+  color: #acaeaf;
+  font-size: 32px;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  transition-property: color;
+}
+.contact__box .close__btn i:hover {
+  color: #e2dbd1;
+  cursor: pointer;
+}
+.contact__box .contact__text {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__box .contact__text h3, .contact__box .contact__text h4 {
+  text-align: center;
+}
+.contact__box .contact__links {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.contact__box .contact__links a {
+  height: 24px;
+  color: #acaeaf;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition-duration: 0.5s;
+  transition-property: color;
+}
+.contact__box .contact__links a:hover {
+  color: #e2dbd1;
+}
 .contact__box.box__active {
-  left: 0 !important;
+  right: 0px !important;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRhY3QuY3NzIiwiLi4vc2Fzcy90eXBvZ3JhcGh5LnNjc3MiLCIuLi9zYXNzL3NldHRpbmdzLnNjc3MiLCIuLi9zYXNzL2NvbnRhY3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDRSxxQkFBQTtFQUNBLDJEQUFBLEVBQUEsa0RBQUE7QURFRjtBRUZBLGNBQUE7QUFFQSxnQkFBQTtBQUtBLGdCQUFBO0FBR0EsVUFBQTtBQVFBLFVBQUE7QUFJQSxVQUFBO0FDdEJBO0VBQ0UsVUFBQTtBSFVGOztBR1BBO0VBQ0UsdUJEY2dCO0VDYmhCLDJCQUFBO0FIVUY7QUdURTtFQUNFLGlCQUFBO0FIV0o7O0FHUkE7RUFDRSxjQUFBO0VBQ0EsZUFBQTtFQUNBLE1BQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsMENBQUE7RUFDQSx1QkRMZ0I7RUNNaEIsd0JBQUE7QUhXRjtBR1ZFO0VBQ0Usa0JBQUE7QUhZSiIsImZpbGUiOiJjb250YWN0LmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRhY3QuY3NzIiwiLi4vc2Fzcy90eXBvZ3JhcGh5LnNjc3MiLCIuLi9zYXNzL3NldHRpbmdzLnNjc3MiLCIuLi9zYXNzL2NvbnRhY3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDRSxxQkFBQTtFQUNBLDJEQUFBLEVBQUEsa0RBQUE7QURFRjtBRUZBLGNBQUE7QUFFQSxnQkFBQTtBQUtBLGdCQUFBO0FBR0EsVUFBQTtBQVFBLFVBQUE7QUFJQSxVQUFBO0FDdkJBOzs7O0NBQUE7QUFLQTtFQUNFLHlCRGNnQjtFQ2JoQiwyQkFBQTtBSFdGO0FHSkE7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSw2QkFBQTtFQUNBLG1CQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxNQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLFNBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EseUJEekJVO0VDMEJWLDBDQUFBO0VBQ0EseUJEWGdCO0VDWWhCLHdCQUFBO0FITUY7QUdKRTtFQUNFLFdBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsMkJBQUE7RUFDQSx1QkFBQTtBSE1KO0FHSkk7RUFDRSxjRHJDUTtFQ3NDUixlQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkQxQlk7RUMyQlosMEJBQUE7QUhNTjtBR0pNO0VBQ0UsY0Q3Q0k7RUM4Q0osZUFBQTtBSE1SO0FHREU7RUFDRSxXQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUhHSjtBR0RJO0VBQ0Usa0JBQUE7QUhHTjtBR1NFO0VBQ0UsV0FBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsU0FBQTtBSFBKO0FHU0k7RUFDRSxZQUFBO0VBQ0EsY0RsRlE7RUNtRlIsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLFFEakZNO0VDa0ZOLHlCRDFFWTtFQzJFWiwwQkFBQTtBSFBOO0FHU007RUFDRSxjRDdGSTtBRnNGWjtBR2dCRTtFQUNFLHFCQUFBO0FIZEoiLCJmaWxlIjoiY29udGFjdC5jc3MifQ== */

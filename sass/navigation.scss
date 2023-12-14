@@ -2,18 +2,22 @@
 
 .navigation {
   width: 100%;
-  height: calc($base-size * 8);
-  top: 0;
+  height: calc($base-size * 6);
   z-index: 10;
+  top: 0;
+  opacity: 1;
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: $color-one;
+  transition-property: top, opacity, position;
+  transition-duration: $transition-time;
 
   .navigation-wrapper {
     width: $base-width;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,10 +25,12 @@
 
   .logo {
     width: 25%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 
     a {
       color: $color-two;
@@ -33,6 +39,8 @@
 
   .navigation-links {
     width: 75%;
+    height: 100%;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
     gap: calc($base-size * 4);
@@ -40,13 +48,36 @@
     align-items: center;
 
     li {
+      height: 100%;
+      padding: 0px;
+      margin-top: 0px;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       font-weight: bold;
 
       a {
-        color: $color-two;
+        height: 100%;
         transition-duration: $transition-time;
         transition-property: color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+        i {
+          color: $color-two;
+          transition-property: color;
+          transition-duration: $transition-time;
+
+          &:hover {
+            color: $color-three;
+          }
+        }
 
         &:hover {
           color: $color-three;
@@ -55,33 +86,52 @@
 
       ul {
         display: none;
-        width: 96px;
+        width: 72px;
         position: absolute;
         background-color: $color-two;
         left: 50%;
         transform: translateX(-50%);
-        padding-top: 12px;
+        margin-top: calc($base-size * 18);
+        list-style-type: disc;
+        list-style-position: outside;
         transition-duration: calc($transition-time / 2);
-        transition-property: opacity, transform;
+        transition-property: opacity, transform, display;
+        border: 2px solid red;
 
         li {
-          margin: auto;
-          width: 100%;
+          position: relative;
+          width: 72px;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin: 0 0 12px 0;
+          margin: 0px;
+          border: 2px solid red;
 
           a {
-            display: block;
-            padding: 0 24px;
+            width: 72px;
+            padding: 0px;
+            margin: 0px;
             color: $color-one;
             text-align: center;
 
-            &:hover {
-              color: $color-three;
+            i {
+              color: $color-one;
+              transition-property: color;
+              transition-duration: $transition-time;
+
+              &:hover {
+                color: $color-three;
+              }
             }
+          }
+
+          &:first-of-type {
+            margin-bottom: 0;
+          }
+
+          &:last-of-type {
+            margin-top: 0;
           }
         }
       }
@@ -97,4 +147,11 @@
     }
   }
 }
+
+&.navigation__hide {
+  top: -70px;
+  opacity: .25;
 }
+}
+
+

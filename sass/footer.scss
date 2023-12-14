@@ -2,8 +2,11 @@
 
 .footer {
   width: 100%;
-  bottom: 0;
+  bottom: -80px;
+  opacity: .25;
   position: fixed;
+  transition-property: bottom, opacity;
+  transition-duration: $transition-time;
 
   .footer-wrapper {
     width: $base-width;
@@ -15,12 +18,39 @@
     .arrow-up {
 
       a {
+        margin-bottom: calc($base-size * 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc($base-size * 7);
+        height: calc($base-size * 7);
+        border-radius: 50px;
+        background-color: $color-one;
+        transition-property: transform;
+        transition-duration: $transition-time;
 
         i {
-          color: $color-one;
+          color: $color-three;
+          font-size: calc($base-size * 6);
           font-weight: bold;
+          transition-property: color;
+          transition-duration: $transition-time;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+
+          i {
+            color: $color-two;
+          }
         }
       }
     }
+  }
+
+  &.footer__show {
+    bottom: 0;
+    opacity: 1;
   }
 }
