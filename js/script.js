@@ -18,25 +18,38 @@ const settings = {
   }
 }
 
-const imagesBox = document.querySelector(settings.selectors.imagesBox);
+//const imagesBox = document.querySelector(settings.selectors.imagesBox);
 const images = document.querySelectorAll(settings.selectors.images);
 
 // CONTACT SHOW AND HIDE - OK
-const contactButton = document.querySelector(settings.selectors.contactButton);
-const contactButtonText = document.querySelector(settings.selectors.contactButtonText);
+const contactButton = document.querySelectorAll(settings.selectors.contactButton);
+const contactButtonText = document.querySelectorAll(settings.selectors.contactButtonText);
 const contactBox = document.querySelector(settings.selectors.contactBox);
 const closeButton = document.querySelector(settings.selectors.closeButton);
 document.addEventListener( 'click', event => {
-  if (event.target == contactButton || event.target == contactButtonText) {
-    event.preventDefault();
-    contactButton.classList.toggle(settings.classes.buttonActive);
-    contactBox.classList.toggle(settings.classes.boxActive);
-  } else if (event.target == closeButton) {
-    contactButton.classList.remove(settings.classes.buttonActive);
-    contactBox.classList.remove(settings.classes.boxActive);
+  for (let single of contactButton) {
+    if (event.target == single) {
+      event.preventDefault();
+      single.classList.toggle(settings.classes.buttonActive);
+      contactBox.classList.toggle(settings.classes.boxActive);
+    } else if (event.target == closeButton) {
+      single.classList.remove(settings.classes.buttonActive);
+      contactBox.classList.remove(settings.classes.boxActive);
+    }
+  }
+  for (let single of contactButtonText) {
+    if (event.target == single) {
+      event.preventDefault();
+      single.classList.toggle(settings.classes.buttonActive);
+      contactBox.classList.toggle(settings.classes.boxActive);
+    } else if (event.target == closeButton) {
+      single.classList.remove(settings.classes.buttonActive);
+      contactBox.classList.remove(settings.classes.boxActive);
+    }
   }
 
 
+/*
   // IMAGES - TO DO !!!
   for (let image of images) {
     const imagesBoxRect = imagesBox.getBoundingClientRect();
@@ -59,7 +72,7 @@ document.addEventListener( 'click', event => {
       //event.preventDefault();
       image.classList.remove(settings.classes.imageActive);
     }
-  }
+  } */
 });
 
 // NAVIGATION AND FOOTER HIDE - OK
@@ -70,7 +83,9 @@ let currentScrollPosition = 0;
   window.addEventListener('scroll', event => {
     event.preventDefault();
 
-    contactButton.classList.remove(settings.classes.buttonActive);
+    for (let single of contactButton) {
+      single.classList.remove(settings.classes.buttonActive);
+    }
     contactBox.classList.remove(settings.classes.boxActive);
 
     for (let image of images) {

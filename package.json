@@ -26,11 +26,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "greensock": "^1.20.2",
+    "gsap-promisify": "^1.0.2",
     "run-all": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.23.7",
     "eslint": "^8.44.0",
     "eslint-watch": "^8.0.0",
     "html-validate": "^8.0.5",

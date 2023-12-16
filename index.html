@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
 
     <body>
@@ -62,24 +63,92 @@
         </div>
       </nav>
 
-      <section class="main">
-        <div class="container">
-          <div class="main-wrapper">
-            <div>
-              <a href="#about"><i>dowiedz się więcej</i></a>
+
+
+
+
+      <section class="main-carousel">
+        <div class="carousel-container">
+          <header class="c-header c-header--archive c-header--project-list">
+            <div class="c-mouse-vertical-carousel js-carousel u-media-wrapper u-media-wrapper--16-9">
+              <ul class="c-mouse-vertical-carousel__list js-carousel-list">
+                <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="0">
+                  <a href="#about">
+                    <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                      about us tralalala
+                    </p>
+
+                    <p class="c-mouse-vertical-carousel__title u-a5">
+                      About us
+                    </p>
+                  </a>
+                </li>
+
+                <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="1">
+                  <a href="#wind">
+                    <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                      Wind Turbines tralalala
+                    </p>
+
+                    <p class="c-mouse-vertical-carousel__title u-a5">
+                      Wind Turbines
+                    </p>
+                  </a>
+                </li>
+
+                <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="2">
+                  <a href="#industrial">
+                    <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                      Industrial tralalala
+                    </p>
+
+                    <p class="c-mouse-vertical-carousel__title u-a5">
+                      Industrial
+                    </p>
+                  </a>
+                </li>
+
+                <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="3">
+                  <a href="#inspections">
+                    <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                      Inspections tralalala
+                    </p>
+
+                    <p class="c-mouse-vertical-carousel__title u-a5">
+                      Inspections
+                    </p>
+                  </a>
+                </li>
+
+                <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="3">
+                  <a class="contact__btn" href="#">
+                    <p class="contact__btn-text c-mouse-vertical-carousel__eyebrow u-b4">
+                      Contact tralalala
+                    </p>
+                    <p class="contact__btn-text c-mouse-vertical-carousel__title u-a5">
+                      Contact
+                    </p></a>
+                </li>
+
+              </ul>
+
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background1.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background2.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background3.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background1.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background2.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background3.jpg')"></i>
+              <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./images/background1.jpg')"></i>
+              <i class="c-gradient-overlay"></i>
             </div>
-            <div>
-              <a href="#wind"><img src="./images/wind.svg" alt="wind"/></a>
-            </div>
-            <div>
-              <a href="#industrial"><i>przemysl</i></a>
-            </div>
-            <div>
-              <a href="#inspections"><i>sprzet</i></a>
-            </div>
-          </div>
+          </header>
         </div>
       </section>
+
+
+
+
+
 
       <section id="about" class="about-us">
         <div class="container">
@@ -109,8 +178,12 @@
                 </li>
               </ul>
             </div>
-            <div class="images">
-
+            <div class="carousel-wrapper">
+              <div class="carousel-container">
+                  <button id="left-btn"><i class="arrow"></i></button>
+                  <img id="carousel" src="" alt="">
+                  <button id="right-btn"><i class="arrow"></i></button>
+              </div>
             </div>
           </div>
         </div>
@@ -145,12 +218,26 @@
               </ul>
             </div>
             <div class="images">
-              <img src='./images/background1.jpg'>
-              <img src='./images/background2.jpg'>
-              <img src='./images/background3.jpg'>
-              <img src='./images/background1.jpg'>
-              <img src='./images/background2.jpg'>
-              <img src='./images/background3.jpg'>
+              <div class="gallery-container">
+                <div class="gallery-item" data-index="1">
+                    <img src="./images/background1.jpg">
+                </div>
+                <div class="gallery-item" data-index="2">
+                  <img src="./images/background2.jpg">
+                </div>
+                <div class="gallery-item" data-index="3">
+                  <img src="./images/background3.jpg">
+                </div>
+                <div class="gallery-item" data-index="4">
+                  <img src="./images/background1.jpg">
+                </div>
+                <div class="gallery-item" data-index="5">
+                  <img src="./images/background2.jpg">
+                </div>
+                <div class="gallery-item" data-index="6">
+                  <img src="./images/background3.jpg">
+                </div>
+            </div>
             </div>
           </div>
         </div>
@@ -185,12 +272,17 @@
               </ul>
             </div>
             <div class="images">
-              <img src='./images/background1.jpg'>
-              <img src='./images/background2.jpg'>
-              <img src='./images/background3.jpg'>
-              <img src='./images/background1.jpg'>
-              <img src='./images/background2.jpg'>
-              <img src='./images/background3.jpg'>
+              <div class="gallery">
+                <img src="https://picsum.photos/id/1028/300/300" alt="a forest after an apocalypse">
+                <img src="https://picsum.photos/id/15/300/300" alt="a waterfall and many rocks">
+                <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+                <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+                <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+                <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+                <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+                <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+                <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+              </div>
             </div>
           </div>
         </div>
@@ -264,3 +356,7 @@
 </html>
 
 <script type="text/javascript" src="js/script.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/main-carousel.js"></script>
+<script type="text/javascript" src="js/about-carousel.js"></script>
+<script type="text/javascript" src="js/photo-gallery.js"></script>
