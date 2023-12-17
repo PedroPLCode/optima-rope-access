@@ -1,3 +1,5 @@
+import { utils } from './utils.js';
+
 const galleryItem = document.getElementsByClassName("gallery-item");
 const lightBoxContainer = document.createElement("div");
 const lightBoxContent = document.createElement("div");
@@ -29,11 +31,14 @@ function showLightBox(n) {
     lightBoxImg.setAttribute("src", imageLocation);
 }
 
-function currentImage() {
+async function currentImage() {
     lightBoxContainer.style.display = "block";
 
     let imageIndex = parseInt(this.getAttribute("data-index"));
     showLightBox(index = imageIndex);
+    utils.flashDown(lightBoxImg);
+    await utils.sleep(250);
+    utils.flashUp(lightBoxImg);
 }
 for (let i = 0; i < galleryItem.length; i++) {
     galleryItem[i].addEventListener("click", currentImage);
@@ -42,18 +47,27 @@ for (let i = 0; i < galleryItem.length; i++) {
 function slideImage(n) {
     showLightBox(index += n);
 }
-function prevImage() {
-    slideImage(-1);
+async function prevImage() {
+  utils.flashDown(lightBoxImg);
+  await utils.sleep(250);
+  utils.flashUp(lightBoxImg);
+  slideImage(-1);
 }
-function nextImage() {
-    slideImage(1);
+async function nextImage() {
+  utils.flashDown(lightBoxImg);
+  await utils.sleep(250);
+  utils.flashUp(lightBoxImg);
+  slideImage(1);
 }
+
 lightBoxPrev.addEventListener("click", prevImage);
 lightBoxNext.addEventListener("click", nextImage);
 
-function closeLightBox() {
+async function closeLightBox() {
     if (this === event.target) {
-        lightBoxContainer.style.display = "none";
+      utils.flashDown(lightBoxImg);
+      await utils.sleep(250);
+      lightBoxContainer.style.display = "none";
     }
 }
 lightBoxContainer.addEventListener("click", closeLightBox);

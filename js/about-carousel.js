@@ -1,6 +1,6 @@
+import { utils } from './utils.js';
+
 const img = document.getElementById('carousel');
-const rightBtn = document.getElementById('right-btn');
-const leftBtn = document.getElementById('left-btn');
 
 // Images are from unsplash
 let pictures = ['../images/background1.jpg', '../images/background2.jpg', '../images/background3.jpg'];
@@ -8,25 +8,24 @@ let pictures = ['../images/background1.jpg', '../images/background2.jpg', '../im
 img.src = pictures[0];
 let position = 0;
 
-const moveRight = () => {
+const moveRight = async () => {
     if (position >= pictures.length - 1) {
         position = 0
+        utils.flashDown(img);
+        await utils.sleep(250);
+        utils.flashUp(img);
         img.src = pictures[position];
         return;
     }
+    utils.flashDown(img);
+    await utils.sleep(250);
+    utils.flashUp(img);
     img.src = pictures[position + 1];
+
     position++;
 }
 
-const moveLeft = () => {
-    if (position < 1) {
-        position = pictures.length - 1;
-        img.src = pictures[position];
-        return;
-    }
-    img.src = pictures[position - 1];
-    position--;
+for (;;) {
+  await utils.sleep(5000);
+  moveRight();
 }
-
-rightBtn.addEventListener("click", moveRight);
-leftBtn.addEventListener("click", moveLeft);

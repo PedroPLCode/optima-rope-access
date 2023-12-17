@@ -59,6 +59,8 @@
       .carousel-container img {
         width: 90%;
         z-index: -2;
+        transition-property: filter, opacity;
+        transition-duration: $transition-time;
       }
 
       button {
