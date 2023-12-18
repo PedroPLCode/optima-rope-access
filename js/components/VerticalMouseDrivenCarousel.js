@@ -16,7 +16,6 @@ class VerticalMouseDrivenCarousel {
 		this.bgImgController();
 	}
 
-	//region getters
 	getBgImgs() {
 		return document.querySelectorAll(this.defaults.bgImg);
 	}
@@ -127,4 +126,4 @@ class VerticalMouseDrivenCarousel {
 	}
 }
 
-new VerticalMouseDrivenCarousel();
+export default VerticalMouseDrivenCarousel;
