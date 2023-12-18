@@ -56,7 +56,7 @@ class VerticalMouseDrivenCarousel {
 			"mousemove",
 			event => {
 				this.posY = event.pageY - this.getCarousel().offsetTop;
-				let offset = -this.posY / carouselHeight * listHeight;
+				let offset = -this.posY / carouselHeight * (listHeight / 4);
 
 				TweenMax.to(this.getList(), 0.3, {
 					y: offset,

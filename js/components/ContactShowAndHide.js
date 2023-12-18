@@ -1,4 +1,5 @@
 import settings from '../settings.js';
+//import { app } from '../app.js';
 
 class ContactShowAndHide {
   constructor() {

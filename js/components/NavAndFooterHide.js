@@ -12,6 +12,7 @@ class NavAndFooterHide {
   getElements = () => {
     this.dom = {
       navigation: document.querySelector(settings.selectors.navigation),
+      navigationCheckbox: document.getElementById("menu-toggle"),
       footer: document.querySelector(settings.selectors.footer),
     }
   }
@@ -24,22 +25,14 @@ class NavAndFooterHide {
         single.classList.remove(settings.classes.buttonActive);
       }
       app.contact.dom.contactBox.classList.remove(settings.classes.boxActive);
-  /*
-      for (let image of images) {
-        if (image.classList.contains(settings.classes.imageActive)) {
-          image.style.height = '100%';
-          image.style.width = `100%`;
-          image.style.transform = ``;
-          image.classList.remove(settings.classes.imageActive);
-        }
-      }
-      */
 
       this.currentScrollPosition = window.pageYOffset;
       if (this.previousScrollPosition - this.currentScrollPosition < 0) {
         this.dom.navigation.classList.add(settings.classes.navigationHide);
+        app.navFooterHide.dom.navigationCheckbox.checked = false;
       } else {
         this.dom.navigation.classList.remove(settings.classes.navigationHide);
+        //app.navFooterHide.dom.navigationCheckbox.checked = false;
       }
       this.previousScrollPosition = this.currentScrollPosition;
       if (window.pageYOffset < 25) {
