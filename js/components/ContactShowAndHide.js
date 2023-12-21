@@ -1,5 +1,4 @@
 import settings from '../settings.js';
-//import { app } from '../app.js';
 
 class ContactShowAndHide {
   constructor() {
@@ -9,8 +8,8 @@ class ContactShowAndHide {
 
   getElements = () => {
     this.dom = {
-      contactButton: document.querySelectorAll(settings.selectors.contactButton),
-      contactButtonText: document.querySelectorAll(settings.selectors.contactButtonText),
+      contactButtons: document.querySelectorAll(settings.selectors.contactButton),
+      contactButtonsTexts: document.querySelectorAll(settings.selectors.contactButtonText),
       contactBox: document.querySelector(settings.selectors.contactBox),
       closeButton: document.querySelector(settings.selectors.closeButton),
     }
@@ -18,27 +17,34 @@ class ContactShowAndHide {
 
   initActions = () => {
     document.addEventListener( 'click', event => {
-      for (let singleElement of this.dom.contactButton) {
-        if (event.target == singleElement) {
-          singleElement.preventDefault();
-          singleElement.classList.toggle(settings.classes.buttonActive);
-          this.dom.contactBox.classList.toggle(settings.classes.boxActive);
-        } else if (event.target == this.dom.closeButton) {
-          singleElement.classList.remove(settings.classes.buttonActive);
-          this.dom.contactBox.classList.remove(settings.classes.boxActive);
-        }
-      }
-      for (let singleElement of this.dom.contactButtonText) {
-        if (event.target == singleElement) {
-          event.preventDefault();
-          singleElement.classList.toggle(settings.classes.buttonActive);
-          this.dom.contactBox.classList.toggle(settings.classes.boxActive);
-        } else if (event.target == this.dom.closeButton) {
-          singleElement.classList.remove(settings.classes.buttonActive);
-          this.dom.contactBox.classList.remove(settings.classes.boxActive);
-        }
-      }
+      this.handleClick(event, this.dom.contactButtons);
+      this.handleClick(event, this.dom.contactButtonsTexts);
     });
+  }
+
+  handleClick = (event, elements) => {
+    for (let element of elements) {
+      this.handleElementClick(event, element);
+    }
+  }
+
+  handleElementClick = (event, element) => {
+    if (event.target == element) {
+      event.preventDefault();
+      this.contactBoxToggle(element);
+    } else if (event.target == this.dom.closeButton) {
+      this.contactBoxHide(element);
+    }
+  }
+
+  contactBoxToggle = element => {
+    element.classList.toggle(settings.classes.buttonActive);
+    this.dom.contactBox.classList.toggle(settings.classes.boxActive);
+  }
+
+  contactBoxHide = element => {
+    element.classList.remove(settings.classes.buttonActive);
+    this.dom.contactBox.classList.remove(settings.classes.boxActive);
   }
 }
 

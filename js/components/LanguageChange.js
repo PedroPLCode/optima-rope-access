@@ -63,15 +63,21 @@ class LanguageChange {
     element.style.opacity = '1';
   }
 
+  changeHtmlLangAttribute = lang => {
+    document.documentElement.setAttribute("lang", lang);
+  }
+
   setEnglish = () => {
     this.hidePolish();
     this.showEnglish();
+    this.changeHtmlLangAttribute('en');
     this.isEnglish = true;
   }
 
   setPolish = () => {
     this.hideEnglish();
     this.showPolish();
+    this.changeHtmlLangAttribute('pl');
     this.isEnglish = false;
   }
 

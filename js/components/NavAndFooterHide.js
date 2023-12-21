@@ -12,7 +12,7 @@ class NavAndFooterHide {
   getElements = () => {
     this.dom = {
       navigation: document.querySelector(settings.selectors.navigation),
-      navigationCheckbox: document.getElementById("menu-toggle"),
+      navigationCheckbox: document.getElementById(settings.selectors.navigationCheckbox),
       footer: document.querySelector(settings.selectors.footer),
     }
   }
@@ -20,27 +20,43 @@ class NavAndFooterHide {
   initActions = () => {
     window.addEventListener('scroll', event => {
       event.preventDefault();
-
-      for (let single of app.contact.dom.contactButton) {
-        single.classList.remove(settings.classes.buttonActive);
-      }
-      app.contact.dom.contactBox.classList.remove(settings.classes.boxActive);
-
-      this.currentScrollPosition = window.pageYOffset;
-      if (this.previousScrollPosition - this.currentScrollPosition < 0) {
-        this.dom.navigation.classList.add(settings.classes.navigationHide);
-        app.navFooterHide.dom.navigationCheckbox.checked = false;
-      } else {
-        this.dom.navigation.classList.remove(settings.classes.navigationHide);
-        //app.navFooterHide.dom.navigationCheckbox.checked = false;
-      }
-      this.previousScrollPosition = this.currentScrollPosition;
-      if (window.pageYOffset < 25) {
-        this.dom.footer.classList.remove(settings.classes.footerShow);
-      } else {
-        this.dom.footer.classList.add(settings.classes.footerShow);
-      }
+      this.handleContactBoxVisibility();
+      this.handleNavigationVisibility();
+      this.handleFooterVisibility();
     });
+  }
+
+  handleContactBoxVisibility = () => {
+    for (let element of app.contact.dom.contactButtons) {
+      app.contact.contactBoxHide(element);
+    }
+  }
+
+  handleNavigationVisibility = () => {
+    this.currentScrollPosition = window.pageYOffset;
+    this.previousScrollPosition - this.currentScrollPosition < 0 ? this.navigationHide(): this.navigationShow();
+    this.previousScrollPosition = this.currentScrollPosition;
+  }
+
+  navigationShow = () => {
+    this.dom.navigation.classList.remove(settings.classes.navigationHide);
+  }
+
+  navigationHide = () => {
+    this.dom.navigation.classList.add(settings.classes.navigationHide);
+    app.navFooterHide.dom.navigationCheckbox.checked = false;
+  }
+
+  handleFooterVisibility = () => {
+    window.pageYOffset < 25 ? this.footerHide() : this.footerShow();
+  }
+
+  footerShow = () => {
+    this.dom.footer.classList.add(settings.classes.footerShow);
+  }
+
+  footerHide = () => {
+    this.dom.footer.classList.remove(settings.classes.footerShow);
   }
 }
 

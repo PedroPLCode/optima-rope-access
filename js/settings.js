@@ -2,6 +2,7 @@ export const settings = {
   selectors: {
     navigation: '.navigation',
     footer: '.footer',
+    navigationCheckbox: "menu-toggle",
     contactButton: '.contact__btn',
     contactButtonText: '.contact__btn-text',
     contactBox: '.contact__box',
