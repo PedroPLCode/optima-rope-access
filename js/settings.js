@@ -8,6 +8,9 @@ export const settings = {
     closeButton: '.close__trigger',
     imagesBox: '.images',
     images: 'img',
+    langChangeTrigger: '.lang-change',
+    langEnglish: '.eng',
+    langPolish: '.pol',
   },
   classes: {
     boxActive: 'box__active',
