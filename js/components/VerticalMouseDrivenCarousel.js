@@ -35,7 +35,7 @@ class VerticalMouseDrivenCarousel {
 	init() {
 		TweenMax.set(this.getBgImgs(), {
 			autoAlpha: 0,
-			scale: 1.05
+			scale: 1.1
 		});
 
 		TweenMax.set(this.getBgImgs()[0], {

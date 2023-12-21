@@ -1,10 +1,11 @@
 @import './settings.scss';
 @import './keyframes.scss';
 
-.about-us {
+.about {
   height: 100vh;
+  margin-top: 36px;
 
-  .about-us-wrapper {
+  .about-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
@@ -58,6 +59,8 @@
 
       .carousel-container img {
         width: 90%;
+        height: 320px;
+        object-fit: cover;
         z-index: -2;
         transition-property: filter, opacity;
         transition-duration: $transition-time;

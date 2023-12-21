@@ -39,6 +39,10 @@ html {
 
 section {
   padding: 96px 0;
+  &:first-of-type {
+    height: 100dvh;
+    margin-bottom: 0;
+  }
 }
 
 ul {

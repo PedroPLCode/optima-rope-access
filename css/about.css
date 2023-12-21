@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* Variables */
+/* Main colors */
+/* Text colors */
+/* Sizes */
+/* Other */
+/* Fonts */
+.about {
+  height: 100vh;
+  margin-top: 36px;
+}
+.about .about-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.about .about-wrapper .description {
+  height: 100%;
+  width: 60rem;
+}
+.about .about-wrapper .description h3 {
+  text-align: center;
+}
+.about .about-wrapper .description h4 {
+  text-align: center;
+}
+.about .about-wrapper .carousel-wrapper {
+  height: 65vh;
+  width: 40rem;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about-wrapper .carousel-wrapper .carousel-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  /*  box-shadow is from materialize css's website
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2); */
+}
+.about .about-wrapper .carousel-wrapper .carousel-container img {
+  width: 90%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+  transition-property: filter, opacity;
+  transition-duration: 0.5s;
+}
+.about .about-wrapper .carousel-wrapper button {
+  height: 10%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 1em;
+  display: flex;
+}
+.about .about-wrapper .carousel-wrapper button .arrow {
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  transition: transform 0.3s ease-out;
+  outline: none;
+}
+.about .about-wrapper .carousel-wrapper #right-btn {
+  margin: auto 0 auto -2em;
+}
+.about .about-wrapper .carousel-wrapper #right-btn .arrow {
+  transform: rotate(-45deg);
+}
+.about .about-wrapper .carousel-wrapper #left-btn {
+  z-index: 0;
+  margin: auto -2em auto 0;
+}
+.about .about-wrapper .carousel-wrapper #left-btn .arrow {
+  transform: rotate(135deg);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFib3V0LmNzcyIsIi4uL3Nhc3MvdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9zZXR0aW5ncy5zY3NzIiwiLi4vc2Fzcy9hYm91dC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLHFCQUFBO0VBQ0EsMkRBQUEsRUFBQSxrREFBQTtBREVGO0FFRkEsY0FBQTtBQUVBLGdCQUFBO0FBS0EsZ0JBQUE7QUFHQSxVQUFBO0FBV0EsVUFBQTtBQUlBLFVBQUE7QUQzQkE7RUFDRSxxQkFBQTtFQUNBLDJEQUFBLEVBQUEsa0RBQUE7QURZRjtBRVpBLGNBQUE7QUFFQSxnQkFBQTtBQUtBLGdCQUFBO0FBR0EsVUFBQTtBQVdBLFVBQUE7QUFJQSxVQUFBO0FDeEJBO0VBQ0UsYUFBQTtFQUNBLGdCQUFBO0FIbUJGO0FHakJFO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsUUREUTtBRm9CWjtBR2pCSTtFQUNFLFlBQUE7RUFDQSxZQUFBO0FIbUJOO0FHakJNO0VBQ0Usa0JBQUE7QUhtQlI7QUdoQk07RUFDRSxrQkFBQTtBSGtCUjtBR0pJO0VBQ0UsWUFBQTtFQUNBLFlBQUE7RUFDQSxrQkQ3Qk07RUM4Qk4sMkJBQUE7RUFDQSxzQkFBQTtFQUNBLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FITU47QUdKTTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0E7O2dGQUFBO0FIUVI7QUdITTtFQUNFLFVBQUE7RUFDQSxhQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtFQUNBLFdBQUE7RUFDQSxvQ0FBQTtFQUNBLHlCRHpDVTtBRjhDbEI7QUdGTTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0FISVI7QUdETTtFQUNFLGtCQUFBO0VBQ0EseUJBQUE7RUFDQSxxQkFBQTtFQUNBLGFBQUE7RUFDQSxtQ0FBQTtFQUNBLGFBQUE7QUhHUjtBR0FNO0VBQ0Usd0JBQUE7QUhFUjtBR0NNO0VBQ0UseUJBQUE7QUhDUjtBR0VNO0VBQ0UsVUFBQTtFQUNBLHdCQUFBO0FIQVI7QUdHTTtFQUNFLHlCQUFBO0FIRFIiLCJmaWxlIjoiYWJvdXQuY3NzIn0= */

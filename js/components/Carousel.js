@@ -15,7 +15,7 @@ class Carousel {
   }
 
   initActions = async () => {
-    this.pictures = ['../images/background1.jpg', '../images/background2.jpg', '../images/background3.jpg'];
+    this.pictures = ['../../images/about/about1.jpg', '../../images/about/about2.jpg', '../../images/about/about3.jpg', '../../images/about/about4.jpg'];
     this.position = 0;
     this.dom.img.src =  this.pictures[0];
     for (;;) {
