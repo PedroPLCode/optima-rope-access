@@ -27,7 +27,7 @@ class PhotoGallery {
                                         settings.classes.lightboxPrev
                                         );
     this.dom.lightBoxNext.classList.add(settings.classes.fa,
-                                        settings.classes.faAngleRigth,
+                                        settings.classes.faAngleRight,
                                         settings.classes.lightboxNext
                                         );
     this.dom.lightBoxContainer.appendChild(this.dom.lightBoxContent);

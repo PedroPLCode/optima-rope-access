@@ -14,16 +14,30 @@
     align-items: center;
     gap: $base-size;
 
+    @media (max-width: $media-border) {
+      flex-direction: column;
+    }
+
     .description {
       height: 100%;
       width: 60rem;
+      order: 1;
+
+      @media (max-width: $media-border) {
+        height: 50%;
+        width: 100%;
+      }
+
+      h3, h4, p {
+        text-align: left;
+      }
 
       h3 {
-        text-align: center;
+
       }
 
       h4 {
-        text-align: center;
+
       }
 
       ul {
@@ -47,14 +61,16 @@
       justify-content: center;
       align-items: center;
 
+      @media (max-width: $media-border) {
+        height: 50%;
+        width: 100%;
+      }
+
       .carousel-container {
         width: 500px;
         height: 500px;
         display: flex;
         justify-content: center;
-        /*  box-shadow is from materialize css's website
-        box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
-            0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2); */
       }
 
       .carousel-container img {

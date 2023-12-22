@@ -5,7 +5,7 @@
   margin-top: 0;
 
 	color: #fff;
-	background-color: #30bcd4;
+	background-color: #e46b25;
   height: calc(100dvh);
   width: 100%;
   display: flex;
@@ -42,6 +42,11 @@
 	font-weight: 700;
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 	color: #fff;
+
+  @media (max-width: $media-border) {
+    font-size: 22px;
+    line-height: 15px;
+  }
 }
 
 .u-b4 {
@@ -51,6 +56,11 @@
 	letter-spacing: 0.3px;
 	font-weight: normal;
 	color: #fff;
+
+  @media (max-width: $media-border) {
+    font-size: 16px;
+    line-height: 12px;
+  }
 }
 
 a {
@@ -89,12 +99,20 @@ a {
 	position: relative;
 	overflow: hidden;
 
+  @media (max-width: $media-border) {
+    height: 100dvh;
+  }
+
 	&__list {
 		width: 100%;
 		position: absolute;
 		left: 0;
 		top: 40%;
 		z-index: 1;
+
+    @media (max-width: $media-border) {
+      top: 50%;
+    }
 	}
 
 	&__list-item {
