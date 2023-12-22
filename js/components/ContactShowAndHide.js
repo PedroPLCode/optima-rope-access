@@ -16,7 +16,7 @@ class ContactShowAndHide {
   }
 
   initActions = () => {
-    document.addEventListener( 'click', event => {
+    document.addEventListener('click', event => {
       this.handleClick(event, this.dom.contactButtons);
       this.handleClick(event, this.dom.contactButtonsTexts);
     });

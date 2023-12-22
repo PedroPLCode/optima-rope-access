@@ -1,6 +1,5 @@
+import { settings } from '../settings.js';
 import { utils } from '../utils.js';
-//import { app } from './app.js';
-//import { settings } from './settings.js';
 
 class PhotoGallery {
   constructor() {
@@ -11,28 +10,31 @@ class PhotoGallery {
 
   getElements = () => {
     this.dom = {
-      galleryItem: document.getElementsByClassName("gallery-item"),
-      lightBoxContainer: document.createElement("div"),
-      lightBoxContent: document.createElement("div"),
-      lightBoxImg: document.createElement("img"),
-      lightBoxPrev: document.createElement("div"),
-      lightBoxNext: document.createElement("div"),
+      galleryItem: document.getElementsByClassName(settings.selectors.galleryItem),
+      lightBoxContainer: document.createElement(settings.selectors.div),
+      lightBoxContent: document.createElement(settings.selectors.div),
+      lightBoxImg: document.createElement(settings.selectors.images),
+      lightBoxPrev: document.createElement(settings.selectors.div),
+      lightBoxNext: document.createElement(settings.selectors.div),
     }
   }
 
   initElements = () => {
-    this.dom.lightBoxContainer.classList.add("lightbox");
-    this.dom.lightBoxContent.classList.add("lightbox-content");
-    this.dom.lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
-    this.dom.lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
-
+    this.dom.lightBoxContainer.classList.add(settings.classes.lightbox);
+    this.dom.lightBoxContent.classList.add(settings.classes.lightboxContent);
+    this.dom.lightBoxPrev.classList.add(settings.classes.fa,
+                                        settings.classes.faAngleLeft,
+                                        settings.classes.lightboxPrev
+                                        );
+    this.dom.lightBoxNext.classList.add(settings.classes.fa,
+                                        settings.classes.faAngleRigth,
+                                        settings.classes.lightboxNext
+                                        );
     this.dom.lightBoxContainer.appendChild(this.dom.lightBoxContent);
     this.dom.lightBoxContent.appendChild(this.dom.lightBoxImg);
     this.dom.lightBoxContent.appendChild(this.dom.lightBoxPrev);
     this.dom.lightBoxContent.appendChild(this.dom.lightBoxNext);
-
     document.body.appendChild(this.dom.lightBoxContainer);
-
     this.index = 1;
   }
 
@@ -52,8 +54,8 @@ class PhotoGallery {
     } else if (n < 1) {
       this.index = this.dom.galleryItem.length;
     }
-    let imageLocation = this.dom.galleryItem[this.index-1].children[0].getAttribute("src");
-    this.dom.lightBoxImg.setAttribute("src", imageLocation);
+    let imageLocation = this.dom.galleryItem[this.index-1].children[0].getAttribute(settings.selectors.src);
+    this.dom.lightBoxImg.setAttribute(settings.selectors.src, imageLocation);
   }
 
   slideImage = n => {
@@ -63,7 +65,7 @@ class PhotoGallery {
   currentImage = async (event, i) => {
     event.preventDefault();
     this.dom.lightBoxContainer.style.display = "block";
-    let imageIndex = parseInt(this.dom.galleryItem[i].getAttribute("data-index"));
+    let imageIndex = parseInt(this.dom.galleryItem[i].getAttribute(settings.selectors.dataIndex));
     this.showLightBox(this.index = imageIndex);
     utils.flashDown(this.dom.lightBoxImg);
     await utils.sleep(250);

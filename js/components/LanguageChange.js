@@ -27,6 +27,28 @@ class LanguageChange {
     });
   }
 
+  changeLanguage = () => {
+    this.isEnglish ? this.setPolish() : this.setEnglish();
+  }
+
+  setEnglish = () => {
+    this.hidePolish();
+    this.showEnglish();
+    this.changeHtmlLangAttribute('en');
+    this.isEnglish = true;
+  }
+
+  setPolish = () => {
+    this.hideEnglish();
+    this.showPolish();
+    this.changeHtmlLangAttribute('pl');
+    this.isEnglish = false;
+  }
+
+  changeHtmlLangAttribute = lang => {
+    document.documentElement.setAttribute("lang", lang);
+  }
+
   hidePolish = () => {
     for (let element of this.dom.elementsPolish) {
       this.hideElement(element);
@@ -61,28 +83,6 @@ class LanguageChange {
     await utils.sleep(250);
     element.style.display = 'block';
     element.style.opacity = '1';
-  }
-
-  changeHtmlLangAttribute = lang => {
-    document.documentElement.setAttribute("lang", lang);
-  }
-
-  setEnglish = () => {
-    this.hidePolish();
-    this.showEnglish();
-    this.changeHtmlLangAttribute('en');
-    this.isEnglish = true;
-  }
-
-  setPolish = () => {
-    this.hideEnglish();
-    this.showPolish();
-    this.changeHtmlLangAttribute('pl');
-    this.isEnglish = false;
-  }
-
-  changeLanguage = () => {
-    this.isEnglish ? this.setPolish() : this.setEnglish();
   }
 }
 

@@ -1,16 +1,15 @@
+import { settings } from "../settings.js";
+
 class VerticalMouseDrivenCarousel {
 	constructor(options = {}) {
 		const _defaults = {
-			carousel: ".js-carousel",
-			bgImg: ".js-carousel-bg-img",
-			list: ".js-carousel-list",
-			listItem: ".js-carousel-list-item"
+			carousel: settings.selectors.jsCarousel,
+			bgImg: settings.selectors.jsCarouselBgImg,
+			list: settings.selectors.jsCarouselList,
+			listItem: settings.selectors.jsCarouselListItem,
 		};
-
 		this.posY = 0;
-
 		this.defaults = Object.assign({}, _defaults, options);
-
 		this.initCursor();
 		this.init();
 		this.bgImgController();
@@ -44,7 +43,6 @@ class VerticalMouseDrivenCarousel {
 		});
 
 		this.listItems = this.getListItems().length - 1;
-
 		this.listOpacityController(0);
 	}
 
@@ -52,17 +50,15 @@ class VerticalMouseDrivenCarousel {
 		const listHeight = this.getList().clientHeight;
 		const carouselHeight = this.getCarousel().clientHeight;
 
-		this.getCarousel().addEventListener(
-			"mousemove",
-			event => {
-				this.posY = event.pageY - this.getCarousel().offsetTop;
-				let offset = -this.posY / carouselHeight * (listHeight / 4);
+		this.getCarousel().addEventListener("mousemove", event => {
+			this.posY = event.pageY - this.getCarousel().offsetTop;
+			let offset = -this.posY / carouselHeight * (listHeight / 4);
 
-				TweenMax.to(this.getList(), 0.3, {
-					y: offset,
-					ease: Power4.easeOut
-				});
-			},
+			TweenMax.to(this.getList(), 0.3, {
+				y: offset,
+				ease: Power4.easeOut
+			});
+		},
 			false
 		);
 	}
@@ -71,7 +67,6 @@ class VerticalMouseDrivenCarousel {
 		for (const link of this.getListItems()) {
 			link.addEventListener("mouseenter", ev => {
 				let currentId = ev.currentTarget.dataset.itemId;
-
 				this.listOpacityController(currentId);
 
 				TweenMax.to(ev.currentTarget, 0.3, {

@@ -9,17 +9,17 @@ class Carousel {
 
   getElements = () => {
     this.dom = {
-      img: document.getElementById('carousel'),
+      img: document.getElementById(settings.selectors.carousel),
       footer: document.querySelector(settings.selectors.footer),
     }
   }
 
   initActions = async () => {
-    this.pictures = ['../../images/about/about1.jpg', '../../images/about/about2.jpg', '../../images/about/about3.jpg', '../../images/about/about4.jpg'];
+    this.pictures = settings.pictures.about;
     this.position = 0;
     this.dom.img.src =  this.pictures[0];
     for (;;) {
-      await utils.sleep(5000);
+      await utils.sleep(4000);
       this.moveRight();
     }
   }
@@ -37,7 +37,6 @@ class Carousel {
     await utils.sleep(250);
     utils.flashUp(this.dom.img);
     this.dom.img.src = this.pictures[this.position + 1];
-
     this.position++;
   }
 }

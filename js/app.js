@@ -1,4 +1,3 @@
-//import settings from './settings.js';
 import ContactShowAndHide from './components/ContactShowAndHide.js';
 import NavAndFooterHide from './components/NavAndFooterHide.js';
 import Carousel from './components/Carousel.js';
