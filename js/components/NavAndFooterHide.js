@@ -20,7 +20,7 @@ class NavAndFooterHide {
   initActions = () => {
     window.addEventListener('scroll', event => {
       event.preventDefault();
-      this.handleContactBoxVisibility(); // MA SIĘ CHOWAĆ CZY NIE???
+      this.handleContactBoxVisibility();
       this.handleNavigationVisibility();
       this.handleFooterVisibility();
     });
@@ -34,7 +34,8 @@ class NavAndFooterHide {
 
   handleNavigationVisibility = () => {
     this.currentScrollPosition = window.pageYOffset;
-    this.previousScrollPosition - this.currentScrollPosition < 0 ? this.navigationHide(): this.navigationShow();
+    this.previousScrollPosition - this.currentScrollPosition < 0 ? this.navigationHide() : this.navigationShow();
+    this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationListWrap() : null ;
     this.previousScrollPosition = this.currentScrollPosition;
   }
 
@@ -44,6 +45,10 @@ class NavAndFooterHide {
 
   navigationHide = () => {
     this.dom.navigation.classList.add(settings.classes.navigationHide);
+    this.navigationListWrap();
+  }
+
+  navigationListWrap = () => {
     app.navFooterHide.dom.navigationCheckbox.checked = false;
   }
 

@@ -97,8 +97,8 @@ class VerticalMouseDrivenCarousel {
 
 		if (aboveCurrent > 0) {
 			for (let i = 1; i <= aboveCurrent; i++) {
-				let opacity = 0.5 / i;
-				let offset = 5 * i;
+				let opacity = window.innerWidth > 700 ? 0.5 / i : 1;
+				let offset = window.innerWidth > 700 ? 5 * i : i;
 				TweenMax.to(this.getListItems()[id + i], 0.5, {
 					autoAlpha: opacity,
 					x: offset,
@@ -109,8 +109,8 @@ class VerticalMouseDrivenCarousel {
 
 		if (belowCurrent > 0) {
 			for (let i = 0; i <= belowCurrent; i++) {
-				let opacity = 0.5 / i;
-				let offset = 5 * i;
+				let opacity = window.innerWidth > 700 ? 0.5 / i : 1;
+				let offset = window.innerWidth > 700 ? 5 * i : i;
 				TweenMax.to(this.getListItems()[id - i], 0.5, {
 					autoAlpha: opacity,
 					x: offset,

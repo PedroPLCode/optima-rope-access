@@ -5,6 +5,7 @@
   bottom: -80px;
   opacity: .25;
   position: fixed;
+  z-index: 90;
   transition-property: bottom, opacity;
   transition-duration: $transition-time;
 
@@ -14,6 +15,11 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
+    z-index: 95;
+
+    @media (max-width: $media-border) {
+      width: 90dvw;
+    }
 
     .arrow-up {
 
@@ -27,6 +33,7 @@
         height: calc($base-size * 7);
         border-radius: $radius-round;
         background-color: $color-one;
+        z-index: 100;
         transition-property: transform;
         transition-duration: $transition-time;
 

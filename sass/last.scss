@@ -6,6 +6,10 @@
   background-position: center;
   background-size: cover;
 
+  @media (max-width: $media-border) {
+    height: 33dvh;
+  }
+
   .last-wrapper {
     width: 100%;
     height: 100%;

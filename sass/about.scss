@@ -62,7 +62,7 @@
     }
 
     .carousel-wrapper {
-      height: 65vh;
+      height: 100%;
       width: 40rem;
       border-radius: $base-size;
       background-position: center;
@@ -70,7 +70,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 100;
+      z-index: 80;
 
       @media (max-width: $media-border) {
         height: 50%;

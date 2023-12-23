@@ -3,7 +3,6 @@
 .main-carousel {
   padding-top: 0;
   margin-top: 0;
-
 	color: $color-two;
 	background-color: $color-one;
   height: calc(100dvh);
@@ -34,7 +33,7 @@
 }
 
 .u-a5 {
-  width: auto;
+  width: 100%;
 	font-family: Arial;
 	font-size: 37px;
 	line-height: $base-size;
@@ -43,6 +42,7 @@
 	font-weight: 700;
 	text-shadow: 0 0 3px $color-five;
 	color: $color-two;
+  text-align: right;
 
   @media (max-width: $media-border) {
     font-size: 22px;
@@ -51,12 +51,14 @@
 }
 
 .u-b4 {
+  width: 100%;
 	font-family: Arial;
 	font-size: 12px;
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	font-weight: normal;
 	color: $color-two;
+  text-align: right;
 
   @media (max-width: $media-border) {
     font-size: 16px;
@@ -107,21 +109,31 @@ a {
 	&__list {
 		width: 100%;
 		position: absolute;
-		left: 0;
-		top: 40%;
+		right: 0;
+		top: 40dvh;
 		z-index: 1;
 
     @media (max-width: $media-border) {
-      top: 50%;
+      top: 46dvh;
     }
 	}
 
 	&__list-item {
 		a {
-			display: block;
+      width: 100%;
+			display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
 			padding-bottom: calc($base-size * 3);
 			padding-top: calc($base-size * 3);
+      padding-right: percentage(3/24);
 			padding-left: percentage(13/24);
+
+      @media (max-width: $media-border) {
+        padding-right: calc($base-size * 3);
+        padding-left: 0;
+      }
 		}
 	}
 
