@@ -29,9 +29,15 @@
   padding: 80px calc($base-size * 4);
   list-style: none;
   background-color: $color-one;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  box-shadow: 2px 2px 6px $color-five;
   transition-duration: $transition-time;
   transition-property: all;
+  z-index: 1000;
+
+  @media (max-width: $media-border) {
+    width: 100%;
+    right: calc(-100%);
+  }
 
   .close__btn {
     width: 100%;
@@ -42,7 +48,7 @@
     align-items: flex-start;
 
     i {
-      color: $color-three;
+      color: $color-text;
       font-size: calc($base-size * 4);
       font-weight: bold;
       transition-duration: $transition-time;

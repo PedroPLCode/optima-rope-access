@@ -20,7 +20,7 @@ class NavAndFooterHide {
   initActions = () => {
     window.addEventListener('scroll', event => {
       event.preventDefault();
-      //this.handleContactBoxVisibility(); // MA SIĘ CHOWAĆ CZY NIE???
+      this.handleContactBoxVisibility(); // MA SIĘ CHOWAĆ CZY NIE???
       this.handleNavigationVisibility();
       this.handleFooterVisibility();
     });

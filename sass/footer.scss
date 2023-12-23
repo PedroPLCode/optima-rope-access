@@ -25,7 +25,7 @@
         align-items: center;
         width: calc($base-size * 7);
         height: calc($base-size * 7);
-        border-radius: 50px;
+        border-radius: $radius-round;
         background-color: $color-one;
         transition-property: transform;
         transition-duration: $transition-time;

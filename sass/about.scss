@@ -1,9 +1,13 @@
 @import './settings.scss';
-@import './keyframes.scss';
 
 .about {
-  height: 100vh;
+  height: 100dvh;
   margin-top: 36px;
+  background-color: $color-two;
+
+  @media (max-width: $media-border) {
+    margin-top: 0px;
+  }
 
   .about-wrapper {
     width: 100%;
@@ -24,12 +28,18 @@
       order: 1;
 
       @media (max-width: $media-border) {
-        height: 50%;
+        height: calc(50dvh - ($base-size * 5));
         width: 100%;
+        height: auto;
       }
 
       h3, h4, p {
         text-align: left;
+
+        @media (max-width: $media-border) {
+          font-size: .9rem;
+          text-align: center;
+        }
       }
 
       h3 {
@@ -60,6 +70,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 100;
 
       @media (max-width: $media-border) {
         height: 50%;
@@ -68,7 +79,8 @@
 
       .carousel-container {
         width: 500px;
-        height: 500px;
+        height: 50dvh;
+        margin-top: calc($base-size * 4);
         display: flex;
         justify-content: center;
       }
@@ -76,6 +88,7 @@
       .carousel-container img {
         width: 90%;
         height: 320px;
+
         object-fit: cover;
         z-index: -2;
         transition-property: filter, opacity;
@@ -86,14 +99,14 @@
         height: 10%;
         border: none;
         outline: none;
-        background: rgba(0, 0, 0, 0.5);
+        background: $color-five;
         cursor: pointer;
         padding: 1em;
         display: flex;
       }
 
       button .arrow {
-        border: solid #fff;
+        border: solid $color-two;
         border-width: 0 4px 4px 0;
         display: inline-block;
         padding: 10px;

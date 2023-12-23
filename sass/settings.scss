@@ -3,17 +3,27 @@
 /* Variables */
 
 /* Main colors */
-$color-one: #100e7c;
+$color-one: #eea849;
 $color-two: #e2dbd1;
-$color-three: #acaeaf;
+$color-three: #f46b45;
+$color-four: rgba(255, 145, 0, 0.8);
+$color-five: rgba(0, 0, 0, 0.8);
+$color-six: #b4afaf;
+$color-seven: #444;
+$color-eight: #222;
+$color-black: rgba(255, 255, 255, 0);
+$color-transparent: rgba(0, 0, 0, 0.5); /* nie działa tak */
 
 /* Text colors */
-$color-text: #0f3136;
+$color-text: #007c8f;
 
 /* Sizes */
 $base-size: 8px;
 $base-width: 1148px;
+$border-radius: 5px;
+$radius-round: 50px;
 $media-border: 768px;
+$media-border-small: 480px;
 
 $background-image-1: url('../images/backgrounds/background1.jpg');
 $background-image-2: url('../images/backgrounds/background2.jpg');

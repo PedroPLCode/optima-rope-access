@@ -12,14 +12,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: $color-one;
-  background: linear-gradient(to left, #f46b45, #eea849);
+  background: linear-gradient(to left, $color-three, $color-one);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #FFF;
+  color: $color-text;
   height: 50px;
   padding: 1em;
   transition-property: top, opacity, position;
   transition-duration: $transition-time;
+  z-index: 200;
 
   .navigation-wrapper {
     width: $base-width;
@@ -39,10 +39,10 @@
       font-weight: bold;
 
       a {
-        color: $color-two;
+        color: $color-text;
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         width: 60%;
       }
     }
@@ -56,7 +56,7 @@
       margin: 0;
       padding: 0;
 
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         position: absolute;
         top: 0;
         margin-top: 50px;
@@ -71,15 +71,16 @@
     .menu > li {
       margin: 0 1rem;
       overflow: hidden;
+      color: $color-text;
 
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         display: flex;
         justify-content: center;
         margin: 0;
         padding: 0.5em 0;
         width: 100%;
-        color: white;
-        background-color: #222;
+        color: $color-text;
+        background-color: $color-eight;
       }
     }
 
@@ -92,7 +93,7 @@
       justify-content: center;
       align-items: flex-end;
 
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         display: flex;
         width: 10%;
         order: 2;
@@ -107,7 +108,7 @@
     .menu-button::before,
     .menu-button::after {
       display: block;
-      background-color: #fff;
+      background-color: $color-two;
       position: absolute;
       height: 4px;
       width: 30px;
@@ -131,7 +132,7 @@
     }
 
     #menu-toggle:checked + .menu-button-container .menu-button {
-      background: rgba(255, 255, 255, 0);
+      background: $color-black;
     }
 
     #menu-toggle:checked + .menu-button-container .menu-button::after {
@@ -140,7 +141,7 @@
     }
 
     #menu-toggle ~ .menu li {
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         height: 0;
         margin: 0;
         padding: 0;
@@ -150,16 +151,16 @@
     }
 
     #menu-toggle:checked ~ .menu li {
-      @media (max-width: 700px) {
-        border: 1px solid #333;
+      @media (max-width: $media-border) {
+        border: 1px solid $color-six;
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
       }
     }
     .menu > li:not(:last-child) {
-      @media (max-width: 700px) {
-        border-bottom: 1px solid #444;
+      @media (max-width: $media-border) {
+        border-bottom: 1px solid $color-seven;
       }
     }
 
@@ -176,7 +177,7 @@
         }
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: $media-border) {
         width: 20%;
         margin-left: 0;
         justify-content: flex-end;
