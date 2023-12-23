@@ -64,7 +64,7 @@ class PhotoGallery {
 
   currentImage = async (event, i) => {
     event.preventDefault();
-    this.dom.lightBoxContainer.style.display = "block";
+    this.dom.lightBoxContainer.style.display = settings.styles.displayBlock;
     let imageIndex = parseInt(this.dom.galleryItem[i].getAttribute(settings.selectors.dataIndex));
     this.showLightBox(this.index = imageIndex);
     utils.flashDown(this.dom.lightBoxImg);
@@ -89,7 +89,7 @@ class PhotoGallery {
     if (this.dom.lightBoxContainer === event.target) {
       utils.flashDown(this.dom.lightBoxImg);
       await utils.sleep(250);
-      this.dom.lightBoxContainer.style.display = "none";
+      this.dom.lightBoxContainer.style.display = settings.styles.displayNone;
     }
   }
 }

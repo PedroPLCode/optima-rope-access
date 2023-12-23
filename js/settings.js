@@ -18,6 +18,7 @@ export const settings = {
     jsCarouselBgImg: '.js-carousel-bg-img',
     jsCarouselList: '.js-carousel-list',
     jsCarouselListItem: '.js-carousel-list-item',
+    isVisible: '.is-visible',
     langChangeTrigger: '.lang-change',
     langEnglish: '.eng',
     langPolish: '.pol',
@@ -35,6 +36,18 @@ export const settings = {
     imageActive: 'image__active',
     navigationHide: 'navigation__hide',
     footerShow: 'footer__show',
+    isVisible: 'is-visible',
+  },
+  atributes: {
+    en: 'en',
+    pl: 'pl',
+    lang: 'lang',
+  },
+  styles: {
+    displayNone: 'none',
+    displayBlock: 'block',
+    opacity0: '0',
+    opacity1: '1',
   },
   pictures: {
     about: ['../../images/about/about1.jpg',

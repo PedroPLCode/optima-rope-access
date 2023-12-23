@@ -73,13 +73,13 @@ class VerticalMouseDrivenCarousel {
 					autoAlpha: 1
 				});
 
-				TweenMax.to(".is-visible", 0.2, {
+				TweenMax.to(settings.selectors.isVisible, 0.2, {
 					autoAlpha: 0,
 					scale: 1.05
 				});
 
-				if (!this.getBgImgs()[currentId].classList.contains("is-visible")) {
-					this.getBgImgs()[currentId].classList.add("is-visible");
+				if (!this.getBgImgs()[currentId].classList.contains(settings.classes.isVisible)) {
+					this.getBgImgs()[currentId].classList.add(settings.classes.isVisible);
 				}
 
 				TweenMax.to(this.getBgImgs()[currentId], 0.6, {

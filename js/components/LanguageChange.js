@@ -34,19 +34,19 @@ class LanguageChange {
   setEnglish = () => {
     this.hidePolish();
     this.showEnglish();
-    this.changeHtmlLangAttribute('en');
+    this.changeHtmlLangAttribute(settings.atributes.en);
     this.isEnglish = true;
   }
 
   setPolish = () => {
     this.hideEnglish();
     this.showPolish();
-    this.changeHtmlLangAttribute('pl');
+    this.changeHtmlLangAttribute(settings.atributes.pl);
     this.isEnglish = false;
   }
 
   changeHtmlLangAttribute = lang => {
-    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute(settings.atributes.lang, lang);
   }
 
   hidePolish = () => {
@@ -74,15 +74,15 @@ class LanguageChange {
   }
 
   hideElement = async element => {
-    element.style.opacity = '0';
+    element.style.opacity = settings.styles.opacity0;
     await utils.sleep(250);
-    element.style.display = 'none';
+    element.style.display = settings.styles.displayNone;
   }
 
   showElement = async element => {
     await utils.sleep(250);
-    element.style.display = 'block';
-    element.style.opacity = '1';
+    element.style.display = settings.styles.displayBlock;
+    element.style.opacity = settings.styles.opacity1;
   }
 }
 
