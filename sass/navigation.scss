@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 .navigation {
-  width: 100%;
+  width: 100dvw;
   height: calc($base-size * 6);
   z-index: 10;
   top: 0;
@@ -28,6 +28,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $media-border) {
+      width: 85dvw;
+    }
 
     .logo {
       width: 30%;
@@ -71,7 +75,15 @@
     .menu > li {
       margin: 0 1rem;
       overflow: hidden;
-      color: $color-text;
+      color: $color-white;
+
+      a {
+        color: $color-black;
+
+        @media (max-width: $media-border) {
+          color: $color-four;
+        }
+      }
 
       @media (max-width: $media-border) {
         display: flex;
@@ -79,8 +91,7 @@
         margin: 0;
         padding: 0.5em 0;
         width: 100%;
-        color: $color-text;
-        background-color: $color-eight;
+        background-color: $color-black;
       }
     }
 
@@ -108,7 +119,7 @@
     .menu-button::before,
     .menu-button::after {
       display: block;
-      background-color: $color-two;
+      background-color: $color-black;
       position: absolute;
       height: 4px;
       width: 30px;
@@ -132,7 +143,7 @@
     }
 
     #menu-toggle:checked + .menu-button-container .menu-button {
-      background: $color-black;
+      background: none;
     }
 
     #menu-toggle:checked + .menu-button-container .menu-button::after {

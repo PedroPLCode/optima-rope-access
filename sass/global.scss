@@ -44,14 +44,13 @@ html {
 }
 
 section {
-  padding: 96px 0;
+  padding: 92px 0;
 
   &:first-of-type {
     height: 100dvh;
+
     margin-bottom: 0;
   }
-
-  padding: 96px 0;
 
   @media (max-width: $media-border) {
     padding: 0;
@@ -65,16 +64,13 @@ ul {
 h2, h3, h4 {
   vertical-align: center;
   text-align: center;
-  color: $color-text;
 }
 
 a {
   text-decoration: none;
-  color: $color-text;
 }
 
 p, i {
-  color: $color-text;
   font-style: normal;
   transition-property: opacity;
   transition-duration: $transition-time;

@@ -28,7 +28,7 @@
   margin: 0;
   padding: 80px calc($base-size * 4);
   list-style: none;
-  background-color: $color-one;
+  background-color: $color-transparent;
   box-shadow: 2px 2px 6px $color-five;
   transition-duration: $transition-time;
   transition-property: all;
@@ -48,7 +48,7 @@
     align-items: flex-start;
 
     i {
-      color: $color-text;
+      color: $color-white;
       font-size: calc($base-size * 4);
       font-weight: bold;
       transition-duration: $transition-time;
@@ -71,6 +71,7 @@
 
     h3, h4 {
       text-align: center;
+      color: $color-white;
     }
 
     h3 {
@@ -93,7 +94,7 @@
 
     a {
       height: calc($base-size * 3);
-      color: $color-three;
+      color: $color-white;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -106,8 +107,8 @@
         color: $color-two;
       }
 
-      p {
-
+      p, i {
+        color: $color-white;
       }
     }
   }

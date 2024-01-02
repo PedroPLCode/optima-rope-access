@@ -3,14 +3,18 @@
 .about {
   height: 100dvh;
   margin-top: 36px;
-  background-color: $color-two;
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: $media-border) {
     margin-top: 0px;
   }
 
   .about-wrapper {
-    width: 100%;
+    width: 90dvw;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -23,8 +27,12 @@
     }
 
     .description {
-      height: 100%;
+      height: auto;
       width: 60rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: space-between;
       order: 1;
 
       @media (max-width: $media-border) {
@@ -35,6 +43,7 @@
 
       h3, h4, p {
         text-align: left;
+        color: $color-white;
 
         @media (max-width: $media-border) {
           font-size: .9rem;
@@ -43,7 +52,7 @@
       }
 
       h3 {
-
+        color: $color-four;
       }
 
       h4 {
@@ -68,6 +77,7 @@
       background-position: center;
       background-size: cover;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 80;
@@ -80,9 +90,14 @@
       .carousel-container {
         width: 500px;
         height: 50dvh;
-        margin-top: calc($base-size * 4);
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+
+        @media (max-width: $media-border) {
+          width: 90dvw;
+        }
       }
 
       .carousel-container img {
@@ -93,6 +108,10 @@
         z-index: -2;
         transition-property: filter, opacity;
         transition-duration: $transition-time;
+
+        @media (max-width: $media-border) {
+          width: 90dvw;
+        }
       }
 
       button {

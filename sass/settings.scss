@@ -11,8 +11,9 @@ $color-five: rgba(0, 0, 0, 0.8);
 $color-six: #b4afaf;
 $color-seven: #444;
 $color-eight: #222;
-$color-black: rgba(255, 255, 255, 0);
-$color-transparent: rgba(0, 0, 0, 0.5); /* nie działa tak */
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
+$color-transparent: rgba(0, 0, 0, 0.8); /* nie działa tak */
 
 /* Text colors */
 $color-text: #007c8f;

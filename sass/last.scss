@@ -18,45 +18,56 @@
     justify-content: center;
     align-items: center;
 
-    h3, h4 {
-      text-align: center;
-      color: $color-text;
+    @media (max-width: $media-border) {
     }
 
-    a {
+    h3, h4 {
+      text-align: center;
+      color: $color-black;
+    }
+
+    .last__links {
+      width: 100%;
+      height: auto;
+      padding-top: calc($base-size * 3);
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin: 0;
-      padding: 0;
-      width: calc($base-size * 4);
-      height: calc($base-size * 4);
-      background-color: $color-four;
-      border-radius: $radius-round;
-      transition-property: transform, background-color;
-      transition-duration: $transition-time;
+      gap: calc($base-size * 6);
 
-      i {
-        width: 100%;
-        height: 100%;
-        font-size: calc($base-size * 3);
-        color: $color-text;
-        text-align: center;
-        margin: auto;
-        transition-property: color;
+      a {
+        height: calc($base-size * 3);
+        color: $color-black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: $base-size;
         transition-duration: $transition-time;
+        transition-property: color;
 
-        &:hover {
-          color: $color-four;
+        &:hover p {
+          color: $color-white;
+        }
+
+        &:hover i {
+          color: $color-white;
+        }
+
+        p, i {
+          color: $color-black;
+          transition-duration: $transition-time;
+          transition-property: color;
         }
       }
 
-      &:hover {
-        cursor: pointer;
-        background-color: $color-text;
-        transform: rotate(360deg) scale(1.2);
+      @media (max-width: $media-border) {
+        flex-direction: column;
+        gap: 0;
       }
     }
+
+
   }
 }

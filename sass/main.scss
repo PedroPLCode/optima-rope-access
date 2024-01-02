@@ -3,14 +3,14 @@
 .main-carousel {
   padding-top: 0;
   margin-top: 0;
-	color: $color-two;
-	background-color: $color-one;
+  color: $color-two;
+  background-color: $color-black;
   height: calc(100dvh);
   width: 100%;
   display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   align-content: stretch;
 }
 
@@ -18,30 +18,30 @@
   height: 100dvh;
   width: 100%;
   top: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-	margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin: 0 auto;
 }
 
 .c-header {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .u-a5 {
   width: 100%;
-	font-family: Arial;
-	font-size: 37px;
-	line-height: $base-size;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	font-weight: 700;
-	text-shadow: 0 0 3px $color-five;
-	color: $color-two;
+  font-family: Arial;
+  font-size: 37px;
+  line-height: $base-size;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 3px $color-five;
+  color: $color-four;
   text-align: right;
 
   @media (max-width: $media-border) {
@@ -52,17 +52,17 @@
 
 .u-b4 {
   width: 100%;
-	font-family: Arial;
-	font-size: 12px;
-	line-height: 17px;
-	letter-spacing: 0.3px;
-	font-weight: normal;
-	color: $color-two;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.3px;
+  font-weight: normal;
+  color: $color-four;
   text-align: right;
 
   @media (max-width: $media-border) {
-    font-size: 16px;
-    line-height: 12px;
+      font-size: 16px;
+      line-height: 12px;
   }
 }
 
@@ -72,15 +72,15 @@ a {
 
 //MEDIA WRAPPER
 .u-media-wrapper {
-	position: relative;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
-	height: 0;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 0;
 
-	&#{&}--16-9 {
-		padding-bottom: percentage(9/16);
-	}
+  &#{&}--16-9 {
+	padding-bottom: percentage(9/16);
+  }
 }
 
 // GRADIENT IMAGE OVERLAY
@@ -107,28 +107,30 @@ a {
   }
 
 	&__list {
-		width: 100%;
+		width: 40%;
 		position: absolute;
 		right: 0;
+    padding-right: $base-size * 4;
 		top: 40dvh;
 		z-index: 1;
 
     @media (max-width: $media-border) {
-      top: 46dvh;
+      width: 90%;
+      top: 36dvh;
     }
 	}
 
 	&__list-item {
 		a {
-      width: 100%;
+      width: auto;
 			display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
 			padding-bottom: calc($base-size * 3);
 			padding-top: calc($base-size * 3);
-      padding-right: percentage(3/24);
-			padding-left: percentage(13/24);
+      padding-right: $base-size;
+			padding-left: 0;
 
       @media (max-width: $media-border) {
         padding-right: calc($base-size * 3);
@@ -139,6 +141,7 @@ a {
 
 	&__eyebrow {
 		position: relative;
+    padding-right: $base-size;
 		padding-bottom: 12px;
 
 		span {
