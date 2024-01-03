@@ -48,6 +48,11 @@
     font-size: 22px;
     line-height: 15px;
   }
+
+  @media (min-width: $media-border-large) {
+    font-size: 52px;
+    line-height: $base-size * 2;
+  }
 }
 
 .u-b4 {
@@ -63,6 +68,11 @@
   @media (max-width: $media-border) {
       font-size: 16px;
       line-height: 12px;
+  }
+
+  @media (min-width: $media-border-large) {
+    font-size: 26px;
+    line-height: calc($base-size * 4);
   }
 }
 
@@ -109,7 +119,7 @@ a {
 	&__list {
 		width: 40%;
 		position: absolute;
-		right: 0;
+		right: 5dvw;
     padding-right: $base-size * 4;
 		top: 40dvh;
 		z-index: 1;
@@ -117,6 +127,7 @@ a {
     @media (max-width: $media-border) {
       width: 90%;
       top: 36dvh;
+      right: 0;
     }
 	}
 

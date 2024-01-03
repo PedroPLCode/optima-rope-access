@@ -3,6 +3,10 @@
 .footer {
   width: 100%;
   bottom: -80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   opacity: .25;
   position: fixed;
   z-index: 90;

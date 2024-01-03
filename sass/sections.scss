@@ -18,6 +18,7 @@
     gap: calc($base-size * 3);
 
     @media (max-width: $media-border) {
+      width: 90%;
       padding-top: 5dvh;
       padding-bottom: 5dvh;
       flex-direction: column;
@@ -75,7 +76,7 @@
       @media (max-width: $media-border) {
         margin: calc($base-size * 3) auto;
         height: 45dvh;
-        width: 100%;
+        width: 80dvw;
       }
     }
   }
@@ -172,7 +173,7 @@
 
 .gallery-item img {
   width: 100%;
-  height: 124px;
+  height: 100%;
   object-fit: cover;
 
   @media (max-width: $media-border) {
@@ -232,7 +233,7 @@
 .lightbox-next {
   position: absolute;
   background-color: $color-four;
-  color: $color-text;
+
   padding: 7px;
   top: 45%;
   cursor: pointer;

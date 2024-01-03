@@ -40,7 +40,9 @@ html {
   justify-content: center;
   align-items: center;
 
-
+  @media (min-width: $media-border-large) {
+    max-width: $base-width-large;
+  }
 }
 
 section {
