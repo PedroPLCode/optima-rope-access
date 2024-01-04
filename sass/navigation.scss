@@ -78,6 +78,7 @@
 
       a {
         color: $color-black;
+        font-weight: bold;
 
         @media (max-width: $media-border) {
           color: $color-four;
@@ -162,7 +163,7 @@
 
     #menu-toggle:checked ~ .menu li {
       @media (max-width: $media-border) {
-        border-bottom: 2px solid $color-one;
+        border-bottom: 2px solid $color-four;
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
