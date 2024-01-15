@@ -10,30 +10,43 @@ $color-four: rgba(255, 145, 0, 0.8);
 $color-five: rgba(0, 0, 0, 0.8);
 $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
-$color-transparent: rgba(0, 0, 0, 0.8); /* nie działa tak */
 
 /* Sizes */
 $base-size: 8px;
 $border-radius: 5px;
 $radius-round: 50px;
 
-$base-width: 1148px;
+$base-width: 1024px;
 $base-width-large: 1800px;
 
+$media-border-extra-small: 340px;
 $media-border-small: 480px;
-$media-border: 920px;
+$media-border-medium: 640px;
+$media-border: 1024px;
 $media-border-large: 1600px;
 
-$background-image-1: url('../images/backgrounds/background1.jpg');
-$background-image-2: url('../images/backgrounds/background2.jpg');
-$background-image-3: url('../images/backgrounds/background3.jpg');
-$background-image-4: url('../images/backgrounds/background4.jpg');
-$background-image-5: url('../images/backgrounds/background5.jpg');
-$background-image-6: url('../images/backgrounds/background6.jpg');
+$background-last: url('../images/backgrounds/background-large-6.jpg');
+
+/*
+$background-image-1: url('../images/backgrounds/background-large-1.jpg');
+$background-image-2: url('../images/backgrounds/background-large-2.jpg');
+$background-image-3: url('../images/backgrounds/background-large-3.jpg');
+$background-image-4: url('../images/backgrounds/background-large-4.jpg');
+$background-image-5: url('../images/backgrounds/background-large-5.jpg');
+$background-image-6: url('../images/backgrounds/background-large-6.jpg');
+
+@media (max-width: $media-border-small) {
+  $background-image-1: url('../images/backgrounds/background-small-1.jpg');
+  $background-image-2: url('../images/backgrounds/background-small-2.jpg');
+  $background-image-3: url('../images/backgrounds/background-small-3.jpg');
+  $background-image-4: url('../images/backgrounds/background-small-4.jpg');
+  $background-image-5: url('../images/backgrounds/background-small-5.jpg');
+  $background-image-6: url('../images/backgrounds/background-small-6.jpg');
+}
+*/
 
 /* Other */
 $transition-time: .5s;
-
 
 /* Fonts */
 $font-athena: 'Arial';

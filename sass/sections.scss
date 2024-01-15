@@ -10,7 +10,7 @@
 
   .section-wrapper {
     width: 100%;
-    height: 100%;
+    height: 70dvh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,32 +19,62 @@
 
     @media (max-width: $media-border) {
       width: 90%;
+      height: 100%;
       padding-top: 5dvh;
       padding-bottom: 5dvh;
       flex-direction: column;
-      gap: 0;
+      gap: 0px;
+    }
+
+    @media (orientation: landscape) {
+      width: 90%;
+      height: 100%;
+      padding-top: 5dvh;
+      padding-bottom: 5dvh;
+      flex-direction: row;
+      gap: $base-size;
+    }
+
+    @media (min-width: $media-border-medium) and (max-width: $media-border) {
+      width: 70%;
+      height: 100%;
     }
 
     .description {
-      height: auto;
+      height: 100%;
       width: 40%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-evenly;
+      align-items: space-evenly;
 
       h3, h4, p {
+        font-size: 1.4dvw;
         text-align: right;
         color: $color-black;
 
-        @media (max-width: $media-border) {
+        @media (max-width: $media-border-extra-small) {
+          font-size: .7rem;
+          text-align: center;
+        }
+
+        @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
           font-size: .9rem;
           text-align: center;
+        }
+
+        @media (orientation: landscape) {
+          font-size: 1dvw;
         }
       }
 
       h3 {
+
+        padding: 5px 10px;
+        margin-bottom: 25px;
         color: $color-four;
+        text-align: center;
+        border: 2px solid $color-four;
       }
 
       h4 {
@@ -52,31 +82,44 @@
       }
 
       ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: space-between;
+        height: 100%;
+        border-bottom: 2px solid $color-four;
 
         li {
-
+          &:last-of-type {
+            padding-bottom: 25px;
+          }
           p {
 
+
           }
+        }
+
+        @media (max-width: $media-border) {
+          width: 100%;
         }
       }
 
       @media (max-width: $media-border) {
-        height: auto;
+        height: 45dvh;
         width: 100%;
         margin: auto;
       }
     }
 
     .images {
-      height: 65dvh;
+      height: 100%;
       width: 60%;
       display: block;
 
       @media (max-width: $media-border) {
         margin: calc($base-size * 3) auto;
         height: 45dvh;
-        width: 80dvw;
+        width: 100%;
       }
     }
   }
@@ -92,14 +135,24 @@
           text-align: left;
           color: $color-white;
 
-          @media (max-width: $media-border) {
+          @media (max-width: $media-border-extra-small) {
+            font-size: .7rem;
+            text-align: center;
+          }
+
+          @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
             font-size: .9rem;
             text-align: center;
+          }
+
+          @media (orientation: landscape) {
+            font-size: 1dvw;
           }
         }
 
         h3 {
           color: $color-four;
+          text-align: center;
         }
       }
     }
@@ -133,8 +186,8 @@
 
   @media (max-width: $media-border) {
     height: 100%;
-    grid-template-columns: repeat(2, calc(50%));
-    grid-template-rows: repeat(3, calc(33.333%));
+    grid-template-columns: repeat(2, calc(50% - $base-size * 0.5));
+    grid-template-rows: repeat(3, calc(33.333% - $base-size * 0.666));
   }
 }
 

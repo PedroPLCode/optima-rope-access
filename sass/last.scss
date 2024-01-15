@@ -2,9 +2,11 @@
 
 .last {
   height: 50dvh;
-  background-image: $background-image-6;
-  background-position: center;
-  background-size: cover;
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: $media-border) {
     height: 33dvh;
@@ -22,8 +24,21 @@
     }
 
     h3, h4 {
+      font-size: 1.6dvw;
       text-align: center;
-      color: $color-black;
+      color: $color-white;
+
+      @media (max-width: $media-border-extra-small) {
+        font-size: .7rem;
+      }
+
+      @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
+        font-size: .9rem;
+      }
+    }
+
+    h4 {
+      font-weight: normal;
     }
 
     .last__links {
@@ -38,7 +53,8 @@
 
       a {
         height: calc($base-size * 3);
-        color: $color-black;
+        font-size: 1.6dvw;
+        color: $color-four;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -56,9 +72,13 @@
         }
 
         p, i {
-          color: $color-black;
+          color: $color-four;
           transition-duration: $transition-time;
           transition-property: color;
+        }
+
+        @media (max-width: $media-border) {
+          font-size: .9rem;
         }
       }
 

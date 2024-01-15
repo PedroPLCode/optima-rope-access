@@ -3,6 +3,7 @@ export const settings = {
     navigation: '.navigation',
     footer: '.footer',
     navigationCheckbox: "menu-toggle",
+    navLinks: '.menu li a i',
     contactButton: '.contact__btn',
     contactButtonText: '.contact__btn-text',
     contactBox: '.contact__box',
@@ -55,6 +56,9 @@ export const settings = {
             '../../images/about/about3.jpg',
             '../../images/about/about4.jpg',
     ],
+  },
+  variables: {
+    delay: 250,
   }
 }
 

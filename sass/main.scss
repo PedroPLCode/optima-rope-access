@@ -36,7 +36,7 @@
 .u-a5 {
   width: 100%;
   font-family: Arial;
-  font-size: 37px;
+  font-size: 35px;
   line-height: $base-size;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -112,6 +112,7 @@ a {
 .c-mouse-vertical-carousel {
 	position: relative;
 	overflow: hidden;
+  height: 100dvh;
 
   @media (max-width: $media-border) {
     height: 100dvh;
@@ -128,11 +129,13 @@ a {
     @media (max-width: $media-border) {
       width: 90%;
       top: 36dvh;
+      padding-right: 0;
       right: 0;
     }
 	}
 
 	&__list-item {
+
 		a {
       width: auto;
 			display: flex;

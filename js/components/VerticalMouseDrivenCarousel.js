@@ -64,30 +64,32 @@ class VerticalMouseDrivenCarousel {
 	}
 
 	bgImgController() {
-		for (const link of this.getListItems()) {
-			link.addEventListener("mouseenter", ev => {
-				let currentId = ev.currentTarget.dataset.itemId;
-				this.listOpacityController(currentId);
+    if (window.innerWidth > 900) {
+      for (const link of this.getListItems()) {
+        link.addEventListener("mouseenter", ev => {
+          let currentId = ev.currentTarget.dataset.itemId;
+          this.listOpacityController(currentId);
 
-				TweenMax.to(ev.currentTarget, 0.3, {
-					autoAlpha: 1
-				});
+          TweenMax.to(ev.currentTarget, 0.3, {
+            autoAlpha: 1
+          });
 
-				TweenMax.to(settings.selectors.isVisible, 0.2, {
-					autoAlpha: 0,
-					scale: 1.05
-				});
+          TweenMax.to(settings.selectors.isVisible, 0.2, {
+            autoAlpha: 0,
+            scale: 1.05
+          });
 
-				if (!this.getBgImgs()[currentId].classList.contains(settings.classes.isVisible)) {
-					this.getBgImgs()[currentId].classList.add(settings.classes.isVisible);
-				}
+          if (!this.getBgImgs()[currentId].classList.contains(settings.classes.isVisible)) {
+            this.getBgImgs()[currentId].classList.add(settings.classes.isVisible);
+          }
 
-				TweenMax.to(this.getBgImgs()[currentId], 0.6, {
-					autoAlpha: 1,
-					scale: 1
-				});
-			});
-		}
+          TweenMax.to(this.getBgImgs()[currentId], 0.6, {
+            autoAlpha: 1,
+            scale: 1
+          });
+        });
+      }
+    }
 	}
 
 	listOpacityController(id) {
@@ -97,8 +99,8 @@ class VerticalMouseDrivenCarousel {
 
 		if (aboveCurrent > 0) {
 			for (let i = 1; i <= aboveCurrent; i++) {
-				let opacity = window.innerWidth > 700 ? 0.5 / i : 1;
-				let offset = window.innerWidth > 700 ? 5 * i : i;
+				let opacity = window.innerWidth > 900 ? 0.5 / i : 1;
+				let offset = window.innerWidth > 900 ? 5 * i : i;
 				TweenMax.to(this.getListItems()[id + i], 0.5, {
 					autoAlpha: opacity,
 					x: offset,
@@ -109,8 +111,8 @@ class VerticalMouseDrivenCarousel {
 
 		if (belowCurrent > 0) {
 			for (let i = 0; i <= belowCurrent; i++) {
-				let opacity = window.innerWidth > 700 ? 0.5 / i : 1;
-				let offset = window.innerWidth > 700 ? 5 * i : i;
+				let opacity = window.innerWidth > 900 ? 0.5 / i : 1;
+				let offset = window.innerWidth > 900 ? 5 * i : i;
 				TweenMax.to(this.getListItems()[id - i], 0.5, {
 					autoAlpha: opacity,
 					x: offset,

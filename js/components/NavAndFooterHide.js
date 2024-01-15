@@ -1,10 +1,12 @@
 import { settings } from '../settings.js';
+import { utils } from '../utils.js';
 import { app } from '../app.js';
 
 class NavAndFooterHide {
   constructor() {
     this.previousScrollPosition = 0;
     this.currentScrollPosition = 0;
+    this.navCanBeVisible = true;
     this.getElements();
     this.initActions();
   }
@@ -18,11 +20,24 @@ class NavAndFooterHide {
   }
 
   initActions = () => {
-    window.addEventListener('scroll', event => {
+    window.addEventListener('click', event => {
+      const navLinks = document.querySelectorAll(settings.selectors.navLinks);
+      for (let singleNavLink of navLinks) {
+        if (event.target == singleNavLink) {
+          this.navCanBeVisible = false;
+          this.navigationListWrap();
+        }
+    }
+    });
+    window.addEventListener('scroll', async event => {
       event.preventDefault();
       this.handleContactBoxVisibility();
       this.handleNavigationVisibility();
       this.handleFooterVisibility();
+      await utils.sleep(settings.variables.delay);
+      this.navCanBeVisible ? null : this.navigationHide();
+      await utils.sleep(settings.variables.delay);
+      this.navCanBeVisible = true;
     });
   }
 
@@ -34,13 +49,13 @@ class NavAndFooterHide {
 
   handleNavigationVisibility = () => {
     this.currentScrollPosition = window.pageYOffset;
-    this.previousScrollPosition - this.currentScrollPosition < 0 ? this.navigationHide() : this.navigationShow();
+    this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationShow() : this.navigationHide();
     this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationListWrap() : null ;
     this.previousScrollPosition = this.currentScrollPosition;
   }
 
   navigationShow = () => {
-    this.dom.navigation.classList.remove(settings.classes.navigationHide);
+    this.navCanBeVisible ? this.dom.navigation.classList.remove(settings.classes.navigationHide): null;
   }
 
   navigationHide = () => {

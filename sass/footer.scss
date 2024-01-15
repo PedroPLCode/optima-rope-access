@@ -14,7 +14,7 @@
   transition-duration: $transition-time;
 
   .footer-wrapper {
-    width: $base-width;
+    width: 99%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -49,11 +49,14 @@
           transition-duration: $transition-time;
         }
 
-        &:hover {
-          transform: scale(1.2);
+        @media (min-width: $media-border) {
 
-          i {
-            color: $color-black;
+          &:hover {
+            transform: scale(1.2);
+
+            i {
+              color: $color-black;
+            }
           }
         }
       }
