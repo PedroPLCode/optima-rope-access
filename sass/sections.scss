@@ -26,11 +26,11 @@
       gap: 0px;
     }
 
-    @media (orientation: landscape) {
+    @media (max-width: $media-border) and (orientation: landscape) {
       width: 90%;
-      height: 100%;
-      padding-top: 5dvh;
-      padding-bottom: 5dvh;
+      height: 100vh;
+      padding: 0px;
+      margin: 0px;
       flex-direction: row;
       gap: $base-size;
     }
@@ -48,6 +48,12 @@
       justify-content: space-evenly;
       align-items: space-evenly;
 
+      @media (max-width: $media-border) and (orientation: landscape) {
+        height: 100dvh;
+        padding: 0px;
+        margin: 0px;
+      }
+
       h3, h4, p {
         font-size: 1.4dvw;
         text-align: right;
@@ -63,7 +69,7 @@
           text-align: center;
         }
 
-        @media (orientation: landscape) {
+        @media (max-width: $media-border) and (orientation: landscape) {
           font-size: 1dvw;
         }
       }
@@ -109,6 +115,10 @@
         width: 100%;
         margin: auto;
       }
+
+      @media (max-width: $media-border) and (orientation: landscape) {
+        height: 100%;
+      }
     }
 
     .images {
@@ -120,6 +130,11 @@
         margin: calc($base-size * 3) auto;
         height: 45dvh;
         width: 100%;
+      }
+
+      @media (max-width: $media-border) and (orientation: landscape) {
+        margin: 0;
+        height: 75dvh;
       }
     }
   }
@@ -269,6 +284,12 @@
   @media (max-width: $media-border-small) {
     width: 90%;
     margin: 20% auto;
+  }
+
+  @media (max-width: $media-border) and (orientation: landscape) {
+    margin: 2.5% auto;
+    width: 90%;
+    height: 90%;
   }
 }
 

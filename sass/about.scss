@@ -27,7 +27,7 @@
       flex-direction: column;
     }
 
-    @media (orientation: landscape) {
+    @media (max-width: $media-border) and (orientation: landscape) {
       flex-direction: row;
     }
 
@@ -52,6 +52,11 @@
         width: 70%;
       }
 
+      @media (max-width: $media-border) and (orientation: landscape) {
+        height: 100%;
+        padding-bottom: 0px;
+      }
+
       h3, h4, p {
         font-size: 1.4dvw;
         text-align: left;
@@ -66,6 +71,10 @@
           font-size: .9rem;
           text-align: center;
         }
+
+        @media (max-width: $media-border) and (orientation: landscape) {
+          font-size: .7rem;
+        }
       }
 
       h3 {
@@ -76,6 +85,10 @@
 
         @media (max-width: $media-border) {
           margin-top: 25px;
+        }
+
+        @media (max-width: $media-border) and (orientation: landscape) {
+          margin-top: 0;
         }
       }
 
@@ -110,6 +123,11 @@
         width: 100%;
       }
 
+      @media (max-width: $media-border) and (orientation: landscape) {
+        height: 100%;
+        width: 40rem;
+      }
+
       .carousel-container {
         width: 100%;
         height: 100%;
@@ -123,7 +141,13 @@
         }
 
         @media (min-width: $media-border-medium) and (max-width: $media-border) {
+          height: 80vh;
           width: 70%;
+        }
+
+        @media (max-width: $media-border) and (orientation: landscape) {
+          width: 100%;
+          height: 100%;
         }
       }
 
@@ -144,6 +168,11 @@
 
         @media (min-width: $media-border-medium) and (max-width: $media-border) {
           width: 60dvw;
+        }
+
+        @media (max-width: $media-border) and (orientation: landscape) {
+          width: 100%;
+          height: 100%;
         }
       }
     }

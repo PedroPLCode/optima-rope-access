@@ -6,7 +6,7 @@
   margin-top: 0;
   color: $color-two;
   background-color: $color-black;
-  height: calc(100dvh);
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -132,6 +132,10 @@ a {
       padding-right: 0;
       right: 0;
     }
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      top: calc($base-size * 6);
+    }
 	}
 
 	&__list-item {
@@ -150,6 +154,11 @@ a {
       @media (max-width: $media-border) {
         padding-right: calc($base-size * 3);
         padding-left: 0;
+      }
+
+      @media (max-width: $media-border) and (orientation: landscape) {
+        padding-top: calc($base-size);
+        padding-bottom: calc($base-size);
       }
 		}
 	}
@@ -179,5 +188,10 @@ a {
 		background-size: cover;
 		background-position: center;
 		will-change: transform;
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      top: 0;
+      height: 100dvh;
+    }
 	}
 }

@@ -58,7 +58,7 @@ export const settings = {
     ],
   },
   variables: {
-    delay: 250,
+    delay: 500,
   }
 }
 

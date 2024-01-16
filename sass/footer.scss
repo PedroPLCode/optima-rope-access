@@ -35,8 +35,8 @@
         align-items: center;
         width: calc($base-size * 7);
         height: calc($base-size * 7);
-        border-radius: $radius-round;
-        background-color: $color-one;
+      /*  border-radius: $radius-round;
+        background-color: $color-one; */
         z-index: 100;
         transition-property: transform;
         transition-duration: $transition-time;
@@ -45,17 +45,18 @@
           color: $color-three;
           font-size: calc($base-size * 6);
           font-weight: bold;
+          transform: rotate(-90deg);
           transition-property: color;
           transition-duration: $transition-time;
         }
 
-        @media (min-width: $media-border) {
+        @media (hover) {
 
           &:hover {
             transform: scale(1.2);
 
             i {
-              color: $color-black;
+              color: $color-one;
             }
           }
         }
