@@ -164,7 +164,7 @@ $background-image-6: url('../images/backgrounds/background-large-6.jpg');
 }
 @media (min-width: 640px) and (max-width: 1024px) {
   .about .about-wrapper .carousel-wrapper .carousel-container {
-    height: 80vh;
+    height: 40vh;
     width: 70%;
   }
 }

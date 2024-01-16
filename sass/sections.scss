@@ -65,12 +65,16 @@
         }
 
         @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-          font-size: .9rem;
+          font-size: .8rem;
           text-align: center;
         }
 
+      /*   @media (max-width: $media-border-small) and (orientation: landscape) {
+          font-size: 1.5dvw;
+        } */
+
         @media (max-width: $media-border) and (orientation: landscape) {
-          font-size: 1dvw;
+          font-size: 1.4dvw;
         }
       }
 
@@ -156,12 +160,12 @@
           }
 
           @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-            font-size: .9rem;
+            font-size: .8rem;
             text-align: center;
           }
 
-          @media (orientation: landscape) {
-            font-size: 1dvw;
+          @media (max-width: $media-border) and (orientation: landscape) {
+            font-size: 1.4dvw;
           }
         }
 
@@ -278,17 +282,17 @@
   @media (max-width: $media-border) {
     width: 80%;
     height: 60%;
-    margin: 15% auto;
+    margin: 20% auto;
   }
 
   @media (max-width: $media-border-small) {
     width: 90%;
-    margin: 20% auto;
+    margin: 35% auto;
   }
 
   @media (max-width: $media-border) and (orientation: landscape) {
     margin: 2.5% auto;
-    width: 90%;
+    width: 75%;
     height: 90%;
   }
 }

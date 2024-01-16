@@ -118,6 +118,10 @@ a {
     height: 100dvh;
   }
 
+  @media (min-width: calc($media-border + 1px)) and (max-width: $media-border-large) {
+    height: 110dvh;
+  }
+
 	&__list {
 		width: 40%;
 		position: absolute;
@@ -128,13 +132,13 @@ a {
 
     @media (max-width: $media-border) {
       width: 90%;
-      top: 36dvh;
+      top: 26dvh;
       padding-right: 0;
       right: 0;
     }
 
     @media (max-width: $media-border) and (orientation: landscape) {
-      top: calc($base-size * 6);
+      top: calc($base-size * 8);
     }
 	}
 
