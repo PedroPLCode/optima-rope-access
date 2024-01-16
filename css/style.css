@@ -685,7 +685,7 @@ a {
 }
 @media (max-width: 1024px) and (orientation: landscape) {
   .c-mouse-vertical-carousel__list {
-    top: 64px;
+    top: 56px;
   }
 }
 .c-mouse-vertical-carousel__list-item a {
