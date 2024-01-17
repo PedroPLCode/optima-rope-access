@@ -2,7 +2,7 @@
 
 .section {
   height: 100dvh;
-  background-color: $color-white;
+  background: linear-gradient(135deg, $color-white 75%, $color-black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@
     @media (max-width: $media-border) {
       width: 90%;
       height: 100%;
-      padding-top: 5dvh;
+      padding-top: 8dvh;
       padding-bottom: 5dvh;
       flex-direction: column;
       gap: 0px;
@@ -82,9 +82,10 @@
 
         padding: 5px 10px;
         margin-bottom: 25px;
-        color: $color-four;
+        color: $color-black;
+        background: linear-gradient(to left, $color-three, $color-one);
         text-align: center;
-        border: 2px solid $color-four;
+        /* border: 2px solid $color-four; */
       }
 
       h4 {
@@ -138,13 +139,13 @@
 
       @media (max-width: $media-border) and (orientation: landscape) {
         margin: 0;
-        height: 75dvh;
+        height: 75vh;
       }
     }
   }
 
   &:nth-of-type(4) {
-    background-color: $color-black;
+    background: linear-gradient(135deg, $color-black 75%, $color-white);
 
     .section-wrapper {
 
@@ -170,7 +171,7 @@
         }
 
         h3 {
-          color: $color-four;
+          color: $color-black;
           text-align: center;
         }
       }

@@ -85,7 +85,7 @@
         font-weight: bold;
 
         @media (max-width: $media-border) {
-          color: $color-four;
+          color: $color-six;
         }
 
         i {
@@ -179,7 +179,7 @@
 
     #menu-toggle:checked ~ .menu li {
       @media (max-width: $media-border) {
-        border-bottom: 2px solid $color-four;
+        /* border-bottom: 2px solid $color-four; */
         height: 2.5em;
         padding: 0.5em;
         display: flex;
@@ -192,7 +192,7 @@
           border-bottom: none;
 
           @media (max-width: $media-border) and (orientation: landscape) {
-            border-bottom: 2px solid $color-four;
+        /* border-bottom: 2px solid $color-four; */
           }
         }
       }
