@@ -69,10 +69,6 @@
           text-align: center;
         }
 
-      /*   @media (max-width: $media-border-small) and (orientation: landscape) {
-          font-size: 1.5dvw;
-        } */
-
         @media (max-width: $media-border) and (orientation: landscape) {
           font-size: 1.4dvw;
         }
@@ -85,11 +81,6 @@
         color: $color-black;
         background: linear-gradient(to left, $color-three, $color-one);
         text-align: center;
-        /* border: 2px solid $color-four; */
-      }
-
-      h4 {
-
       }
 
       ul {
@@ -103,10 +94,6 @@
         li {
           &:last-of-type {
             padding-bottom: 25px;
-          }
-          p {
-
-
           }
         }
 
@@ -219,7 +206,6 @@
 
   @media (max-width: $media-border) {
     flex-basis: 49.80%;
-    /* margin-bottom: 3px; */
 
     &:nth-of-type(7) {
       display: none;
@@ -236,7 +222,6 @@
 
   @media (max-width: $media-border-small) {
     flex-basis: 100%;
-    /* margin-bottom: 1px; */
   }
 }
 

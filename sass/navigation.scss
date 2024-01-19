@@ -179,7 +179,6 @@
 
     #menu-toggle:checked ~ .menu li {
       @media (max-width: $media-border) {
-        /* border-bottom: 2px solid $color-four; */
         height: 2.5em;
         padding: 0.5em;
         display: flex;
@@ -190,10 +189,6 @@
 
         &:last-child {
           border-bottom: none;
-
-          @media (max-width: $media-border) and (orientation: landscape) {
-        /* border-bottom: 2px solid $color-four; */
-          }
         }
       }
 

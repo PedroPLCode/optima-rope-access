@@ -1,16 +1,8 @@
 @import './settings.scss';
-/*
-#menu__toggle {
-  opacity: 0;
-}
-*/
+
 .contact__btn {
   transition-duration: $transition-time;
   transition-property: filter;
-
-  &.button__active {
-
-  }
 }
 
 .contact__box {
@@ -18,7 +10,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* gap: calc($base-size * 4); */
   position: fixed;
   top: 0;
   opacity: 85%;
@@ -27,7 +18,6 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  /* padding: 80px calc($base-size * 4); */
   list-style: none;
   background-color: $color-black;
   box-shadow: 2px 2px 6px $color-five;
@@ -56,15 +46,17 @@
 
     i {
       margin-left: 20px;
-      color: $color-white;
+      color: $color-one;
       font-size: calc($base-size * 4);
       font-weight: bold;
       transition-duration: $transition-time;
       transition-property: color;
 
-      &:hover {
-        color: $color-two;
-        cursor: pointer;
+      @media (hover) {
+        &:hover {
+          color: $color-two;
+          cursor: pointer;
+        }
       }
     }
 
@@ -74,7 +66,7 @@
   }
 
   .contact__text {
-    border: 2px solid $color-white;
+    border: 2px solid $color-one;
     width: 60%;
     height: 20%;
 
@@ -86,15 +78,7 @@
 
     h3, h4 {
       text-align: center;
-      color: $color-white;
-    }
-
-    h3 {
-
-    }
-
-    h4 {
-
+      color: $color-one;
     }
 
     @media (max-width: $media-border) and (orientation: landscape) {
@@ -121,15 +105,21 @@
       justify-content: center;
       align-items: center;
       gap: $base-size;
-      transition-duration: $transition-time;
-      transition-property: color;
 
-      &:hover {
-        color: $color-two;
+      @media (hover) {
+        &:hover p {
+          color: $color-white;
+        }
+
+        &:hover i {
+          color: $color-white;
+        }
       }
 
       p, i {
-        color: $color-white;
+        color: $color-one;
+        transition-duration: $transition-time;
+        transition-property: color;
       }
     }
 
