@@ -52,6 +52,10 @@ section {
   @media (max-width: $media-border) {
     padding: 0;
   }
+
+  @media (min-width: $media-border-large) {
+    padding: 0;
+  }
 }
 
 ul {

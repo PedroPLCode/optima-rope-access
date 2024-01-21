@@ -50,8 +50,13 @@
     line-height: 15px;
   }
 
+  @media (min-width: $media-border) and (max-width: $media-border-large) {
+    font-size: 26px;
+    line-height: $base-size * 2;
+  }
+
   @media (min-width: $media-border-large) {
-    font-size: 52px;
+    font-size: 32px;
     line-height: $base-size * 2;
   }
 }
@@ -122,6 +127,10 @@ a {
     height: 110dvh;
   }
 
+  @media (min-width: $media-border-large) {
+    height: 100dvh;
+  }
+
 	&__list {
 		width: 40%;
 		position: absolute;
@@ -129,6 +138,13 @@ a {
     padding-right: $base-size * 4;
 		top: 40dvh;
 		z-index: 1;
+
+    @media (max-width: $media-border-extra-small) and (min-width: $media-border) {
+      width: 90%;
+      top: 12dvh;
+      padding-right: 0;
+      right: 0;
+    }
 
     @media (max-width: $media-border) {
       width: 90%;
@@ -196,6 +212,13 @@ a {
     @media (max-width: $media-border) and (orientation: landscape) {
       top: 0;
       height: 100dvh;
+    }
+
+    @media (min-width: $media-border-large) {
+      top: 0;
+      height: 100dvh;
+      background-size: 100vw 100vh;
+      min-height: 100vh;
     }
 	}
 }

@@ -84,6 +84,10 @@
     @media (max-width: $media-border) and (orientation: landscape) {
       height: 40%;
     }
+
+    @media (min-width: $media-border) {
+      height: 15%;
+    }
   }
 
   .contact__links {

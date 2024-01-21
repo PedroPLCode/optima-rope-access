@@ -29,7 +29,7 @@
   align-items: flex-end;
   z-index: 95;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .footer .footer-wrapper {
     width: 90dvw;
   }

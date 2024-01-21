@@ -10,6 +10,7 @@
 
   .section-wrapper {
     width: 100%;
+    max-width: $base-width;
     height: 70dvh;
     display: flex;
     flex-direction: row;
@@ -40,6 +41,14 @@
       height: 100%;
     }
 
+    @media (min-width: $media-border) {
+      height: 50dvh;
+    }
+
+    @media (min-width: $media-border-large) {
+      height: 55dvh;
+    }
+
     .description {
       height: 100%;
       width: 40%;
@@ -65,17 +74,24 @@
         }
 
         @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-          font-size: .8rem;
+          font-size: clamp($base-size * 1.8, .8rem, calc($base-size * 4));
           text-align: center;
         }
 
         @media (max-width: $media-border) and (orientation: landscape) {
           font-size: 1.4dvw;
         }
+
+        @media (min-width: $media-border) {
+          font-size: 2.2dvh;
+        }
+
+        @media (min-width: $media-border-large) {
+          font-size: 2dvh;
+        }
       }
 
       h3 {
-
         padding: 5px 10px;
         margin-bottom: 25px;
         color: $color-black;
@@ -148,12 +164,20 @@
           }
 
           @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-            font-size: .8rem;
+            font-size: clamp($base-size * 1.8, .8rem, calc($base-size * 4));
             text-align: center;
           }
 
           @media (max-width: $media-border) and (orientation: landscape) {
             font-size: 1.4dvw;
+          }
+
+          @media (min-width: $media-border) {
+            font-size: 2.2dvh;
+          }
+
+          @media (min-width: $media-border-large) {
+            font-size: 2dvh;
           }
         }
 

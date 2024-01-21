@@ -36,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper {
     width: 85dvw;
   }
@@ -53,12 +53,12 @@
 .navigation .navigation-wrapper .logo a {
   color: rgb(0, 0, 0);
 }
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1025px) and (orientation: landscape) {
   .navigation .navigation-wrapper .logo a {
     font-size: 1.5em;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .logo {
     width: 60%;
   }
@@ -72,7 +72,7 @@
   margin: 0;
   padding: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .menu {
     position: absolute;
     top: 0;
@@ -93,17 +93,17 @@
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .menu > li a {
     color: #F08951;
   }
 }
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1025px) and (orientation: landscape) {
   .navigation .navigation-wrapper .menu > li a i {
     font-size: 1.5em;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .menu > li {
     display: flex;
     justify-content: center;
@@ -122,14 +122,14 @@
   justify-content: center;
   align-items: flex-end;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .menu-button-container {
     display: flex;
     width: 10%;
     order: 2;
   }
 }
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1025px) and (orientation: landscape) {
   .navigation .navigation-wrapper .menu-button-container {
     width: 0;
     margin: 0;
@@ -169,7 +169,7 @@
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
@@ -178,7 +178,7 @@
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper #menu-toggle:checked ~ .menu li {
     height: 2.5em;
     padding: 0.5em;
@@ -192,7 +192,7 @@
     border-bottom: none;
   }
 }
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1025px) and (orientation: landscape) {
   .navigation .navigation-wrapper #menu-toggle:checked ~ .menu li {
     height: calc((100dvh - 50px) / 5);
     padding: 0;
@@ -210,7 +210,7 @@
   width: 44px;
   height: 33px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .navigation .navigation-wrapper .lang__btn {
     width: 20%;
     margin-left: 0;

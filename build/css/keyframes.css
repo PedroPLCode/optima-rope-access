@@ -1,3 +1,28 @@
-@font-face{font-family:"Athena";src:url("../vendor/Athena-Regular.ttf") format("truetype")}
+@charset "UTF-8";
+@font-face {
+  font-family: "Athena";
+  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* Variables */
+/* Main colors */
+/* Sizes */
+/*
+$background-image-1: url('../images/backgrounds/background-large-1.jpg');
+$background-image-2: url('../images/backgrounds/background-large-2.jpg');
+$background-image-3: url('../images/backgrounds/background-large-3.jpg');
+$background-image-4: url('../images/backgrounds/background-large-4.jpg');
+$background-image-5: url('../images/backgrounds/background-large-5.jpg');
+$background-image-6: url('../images/backgrounds/background-large-6.jpg');
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImtleWZyYW1lcy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxvQkFBb0IsQ0FBQywwREFBMEQiLCJmaWxlIjoia2V5ZnJhbWVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2V7Zm9udC1mYW1pbHk6XCJBdGhlbmFcIjtzcmM6dXJsKFwiLi4vdmVuZG9yL0F0aGVuYS1SZWd1bGFyLnR0ZlwiKSBmb3JtYXQoXCJ0cnVldHlwZVwiKX1cbiJdfQ== */
+@media (max-width: $media-border-small) {
+  $background-image-1: url('../images/backgrounds/background-small-1.jpg');
+  $background-image-2: url('../images/backgrounds/background-small-2.jpg');
+  $background-image-3: url('../images/backgrounds/background-small-3.jpg');
+  $background-image-4: url('../images/backgrounds/background-small-4.jpg');
+  $background-image-5: url('../images/backgrounds/background-small-5.jpg');
+  $background-image-6: url('../images/backgrounds/background-small-6.jpg');
+}
+*/
+/* Other */
+/* Fonts */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImtleWZyYW1lcy5jc3MiLCIuLi9zYXNzL3R5cG9ncmFwaHkuc2NzcyIsIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDRSxxQkFBQTtFQUNBLDJEQUFBLEVBQUEsa0RBQUE7QURFRjtBRUZBLGNBQUE7QUFFQSxnQkFBQTtBQVdBLFVBQUE7QUFnQkE7Ozs7Ozs7Ozs7Ozs7Ozs7Q0FBQTtBQWtCQSxVQUFBO0FBR0EsVUFBQSIsImZpbGUiOiJrZXlmcmFtZXMuY3NzIn0= */
