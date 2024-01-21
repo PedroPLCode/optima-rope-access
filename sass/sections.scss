@@ -74,7 +74,7 @@
         }
 
         @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-          font-size: clamp($base-size * 1.8, .8rem, calc($base-size * 4));
+          font-size: clamp($base-size * 1.7, .8rem, calc($base-size * 4));
           text-align: center;
         }
 
@@ -87,7 +87,7 @@
         }
 
         @media (min-width: $media-border-large) {
-          font-size: 2dvh;
+          font-size: 1.8dvh;
         }
       }
 
@@ -164,7 +164,7 @@
           }
 
           @media (min-width: $media-border-extra-small) and (max-width: $media-border) {
-            font-size: clamp($base-size * 1.8, .8rem, calc($base-size * 4));
+            font-size: clamp($base-size * 1.7, .8rem, calc($base-size * 4));
             text-align: center;
           }
 
@@ -177,7 +177,7 @@
           }
 
           @media (min-width: $media-border-large) {
-            font-size: 2dvh;
+            font-size: 1.8dvh;
           }
         }
 

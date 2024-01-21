@@ -1,12 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "Athena";
-  src: url("../vendor/Athena-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-/* Variables */
-/* Main colors */
-/* Sizes */
-/* Other */
-/* Fonts */
+@font-face{font-family:"Athena";src:url("../vendor/Athena-Regular.ttf") format("truetype")}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNldHRpbmdzLmNzcyIsIi4uL3Nhc3MvdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9zZXR0aW5ncy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLHFCQUFBO0VBQ0EsMkRBQUEsRUFBQSxrREFBQTtBREVGO0FFRkEsY0FBQTtBQUVBLGdCQUFBO0FBV0EsVUFBQTtBQWdCQSxVQUFBO0FBR0EsVUFBQSIsImZpbGUiOiJzZXR0aW5ncy5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNldHRpbmdzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxXQUFXLG9CQUFvQixDQUFDLDBEQUEwRCIsImZpbGUiOiJzZXR0aW5ncy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNle2ZvbnQtZmFtaWx5OlwiQXRoZW5hXCI7c3JjOnVybChcIi4uL3ZlbmRvci9BdGhlbmEtUmVndWxhci50dGZcIikgZm9ybWF0KFwidHJ1ZXR5cGVcIil9XG4iXX0= */
