@@ -63,6 +63,7 @@
       justify-content: center;
       align-items: center;
       gap: calc($base-size * 6);
+      z-index: 100;
 
       a {
         height: calc($base-size * 3);
@@ -73,14 +74,11 @@
         justify-content: center;
         align-items: center;
         gap: $base-size;
-        transition-duration: $transition-time;
-        transition-property: color;
 
         @media (hover) {
           &:hover p {
             color: $color-white;
           }
-
           &:hover i {
             color: $color-white;
           }

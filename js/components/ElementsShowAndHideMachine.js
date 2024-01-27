@@ -2,7 +2,7 @@ import { settings } from '../settings.js';
 import { utils } from '../utils.js';
 import { app } from '../app.js';
 
-class NavAndFooterHide {
+class ElementsShowAndHideMachine {
   constructor() {
     this.previousScrollPosition = 0;
     this.currentScrollPosition = 0;
@@ -15,6 +15,7 @@ class NavAndFooterHide {
     this.dom = {
       navigation: document.querySelector(settings.selectors.navigation),
       navigationCheckbox: document.getElementById(settings.selectors.navigationCheckbox),
+      sections: document.querySelectorAll(settings.selectors.section),
       footer: document.querySelector(settings.selectors.footer),
     }
   }
@@ -31,23 +32,45 @@ class NavAndFooterHide {
     });
     window.addEventListener('scroll', async event => {
       event.preventDefault();
-      this.handleContactBoxVisibility();
-      this.handleNavigationVisibility();
-      this.handleFooterVisibility();
-      await utils.sleep(settings.variables.delay);
+      for (let section of this.dom.sections) {
+        if (utils.isInViewport(section)) {
+          this.checkAndSetSectionsVisibility(section, settings.styles.noRotate, true)
+          this.checkAndSetDivsVisibility(section, settings.styles.opacity1, true)
+        } else {
+          this.checkAndSetDivsVisibility(section, settings.styles.opacityLow, false)
+          this.checkAndSetSectionsVisibility(section, settings.styles.fullRotate, false)
+        }
+      }
+      this.checkAndSetContactBoxVisibility();
+      this.checkAndSetNavigationVisibility();
+      this.checkAndSetFooterVisibility();
+      await utils.sleep(settings.variables.delayLong);
       this.navCanBeVisible ? null : this.navigationHide();
-      await utils.sleep(settings.variables.delay);
+      await utils.sleep(settings.variables.delayLong);
       this.navCanBeVisible = true;
     });
   }
 
-  handleContactBoxVisibility = () => {
+  checkAndSetSectionsVisibility = async (section, styleToChange, inVievport) => {
+    await utils.sleep(inVievport ? settings.variables.delayLong : 0);
+    section.classList.add(inVievport ? settings.classes.sectionShow : settings.classes.sectionHide)
+  }
+
+  checkAndSetDivsVisibility = async (section, styleToChange, inVievport) => {
+    const divsIsThisSection = section.querySelectorAll(settings.selectors.allElementsInSection);
+    for (let singleDiv of divsIsThisSection) {
+      await utils.sleep(inVievport ? settings.variables.delayShort : 0);
+      singleDiv.style.opacity = styleToChange;
+    }
+  }
+
+  checkAndSetContactBoxVisibility = () => {
     for (let element of app.contact.dom.contactButtons) {
       app.contact.contactBoxHide(element);
     }
   }
 
-  handleNavigationVisibility = () => {
+  checkAndSetNavigationVisibility = () => {
     this.currentScrollPosition = window.pageYOffset;
     this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationShow() : this.navigationHide();
     this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationListWrap() : null ;
@@ -64,10 +87,10 @@ class NavAndFooterHide {
   }
 
   navigationListWrap = () => {
-    app.navFooterHide.dom.navigationCheckbox.checked = false;
+    app.elementsShowAndHideMachine.dom.navigationCheckbox.checked = false;
   }
 
-  handleFooterVisibility = () => {
+  checkAndSetFooterVisibility = () => {
     window.pageYOffset < 25 ? this.footerHide() : this.footerShow();
   }
 
@@ -80,5 +103,4 @@ class NavAndFooterHide {
   }
 }
 
-export default NavAndFooterHide;
-
+export default ElementsShowAndHideMachine;

@@ -1,5 +1,13 @@
 export const utils = {};
 
+utils.isInViewport = element => {
+  const rect = element.getBoundingClientRect();
+  return (
+      (rect.top + (window.innerHeight) ) >= 0 &&
+      rect.bottom <= ((window.innerHeight * 2 )|| (document.documentElement.clientHeight * 2))
+  );
+}
+
 utils.flashDown = element => {
   element.style.opacity = '0.5';
   element.style.filter = 'blur(4px)';

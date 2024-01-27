@@ -225,8 +225,12 @@
 .gallery-item {
   opacity: .85;
   cursor: pointer;
-  transition-property: opacity;
-  transition-duration: $transition-time;
+
+  @media (hover) {
+    transition-property: filter;
+    transition-duration: $transition-time;
+
+  }
 
   @media (max-width: $media-border) {
     flex-basis: 49.80%;
@@ -249,8 +253,10 @@
   }
 }
 
-.gallery-item:hover {
-  opacity: 1;
+@media (hover) {
+  .gallery-item:hover {
+    filter: brightness(.5);
+  }
 }
 
 .gallery-item img {

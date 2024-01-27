@@ -26,6 +26,14 @@ body {
   font-size: 16px;
   line-height: 1.7;
   font-family: $font-athena;
+
+  @supports (scroll-snap-align: start) {
+    scroll-snap-type: proximity;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 25vh;
+    overflow-y: scroll;
+  }
 }
 
 .container {
@@ -41,8 +49,16 @@ body {
   }
 }
 
+section, nav, footer {
+  @supports (scroll-snap-align: start) {
+    scroll-snap-align: start;
+  }
+}
+
 section {
   padding: 92px 0;
+  transition-duration: $transition-time;
+  transition-property: filter;
 
   &:first-of-type {
     height: 100dvh;
@@ -56,6 +72,19 @@ section {
   @media (min-width: $media-border-large) {
     padding: 0;
   }
+}
+
+.section-hide {
+  filter: blur(4px);
+}
+
+.section-show {
+  filter: none;
+}
+
+section * {
+  transition-duration: $transition-time;
+  transition-property: opacity;
 }
 
 ul {
@@ -77,3 +106,33 @@ p, i {
   transition-duration: $transition-time;
 }
 
+.background-image-9 {
+  background-image: url('../images/backgrounds/background-large-9.jpg');
+  @media (max-width: $media-border-medium) {
+    background-image: url('../images/backgrounds/background-large-9.jpg'); /* SMALL */
+  }
+}
+.background-image-2 {
+  background-image: url('../images/backgrounds/background-large-2.jpg');
+  @media (max-width: $media-border-medium) {
+    background-image: none;
+  }
+}
+.background-image-3 {
+  background-image: url('../images/backgrounds/background-large-3.jpg');
+  @media (max-width: $media-border-medium) {
+    background-image: none;
+  }
+}
+.background-image-1 {
+  background-image: url('../images/backgrounds/background-large-1.jpg');
+  @media (max-width: $media-border-medium) {
+    background-image: none;
+  }
+}
+.background-image-5 {
+  background-image: url('../images/backgrounds/background-large-5.jpg');
+  @media (max-width: $media-border-medium) {
+    background-image: none;
+  }
+}
