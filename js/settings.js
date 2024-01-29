@@ -40,8 +40,8 @@ export const settings = {
     navigationHide: 'navigation__hide',
     footerShow: 'footer__show',
     isVisible: 'is-visible',
-    sectionHide: '.section-hide',
-    sectionShow: '.section-show',
+    sectionHide: 'section-hide',
+    sectionShow: 'section-show',
   },
   atributes: {
     en: 'en',
@@ -55,6 +55,8 @@ export const settings = {
     opacity1: '1',
     opacityLow: '.1',
     opacityMed: '.8',
+    translateLow: 'scale(.5)',
+    translate1: 'scale(1)',
   },
   pictures: {
     about: ['../../images/about/about1.jpg',

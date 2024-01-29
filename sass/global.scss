@@ -84,7 +84,7 @@ section {
 
 section * {
   transition-duration: $transition-time;
-  transition-property: opacity;
+  transition-property: opacity, transform;
 }
 
 ul {

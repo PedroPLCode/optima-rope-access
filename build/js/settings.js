@@ -1,7 +1,9 @@
 export const settings = {
   selectors: {
     navigation: '.navigation',
-    footer: '.footer',
+    section: 'section',
+    allElementsInSection: 'section *',
+    footer: 'footer',
     navigationCheckbox: "menu-toggle",
     navLinks: '.menu li a i',
     contactButton: '.contact__btn',
@@ -38,6 +40,8 @@ export const settings = {
     navigationHide: 'navigation__hide',
     footerShow: 'footer__show',
     isVisible: 'is-visible',
+    sectionHide: '.section-hide',
+    sectionShow: '.section-show',
   },
   atributes: {
     en: 'en',
@@ -49,6 +53,8 @@ export const settings = {
     displayBlock: 'block',
     opacity0: '0',
     opacity1: '1',
+    opacityLow: '.1',
+    opacityMed: '.8',
   },
   pictures: {
     about: ['../../images/about/about1.jpg',
@@ -58,7 +64,8 @@ export const settings = {
     ],
   },
   variables: {
-    delay: 500,
+    delayLong: 500,
+    delayShort: 25,
   }
 }
 

@@ -34,11 +34,11 @@ class ElementsShowAndHideMachine {
       event.preventDefault();
       for (let section of this.dom.sections) {
         if (utils.isInViewport(section)) {
-          //this.checkAndSetSectionsVisibility(section, true)
-          this.checkAndSetDivsVisibility(section, settings.styles.opacity1, settings.styles.translate1, true)
+          this.checkAndSetSectionsVisibility(section, settings.styles.noRotate, true)
+          this.checkAndSetDivsVisibility(section, settings.styles.opacity1, true)
         } else {
-          this.checkAndSetDivsVisibility(section, settings.styles.opacityLow, settings.styles.translateLow, false)
-          //this.checkAndSetSectionsVisibility(section, false)
+          this.checkAndSetDivsVisibility(section, settings.styles.opacityLow, false)
+          this.checkAndSetSectionsVisibility(section, settings.styles.fullRotate, false)
         }
       }
       this.checkAndSetContactBoxVisibility();
@@ -51,19 +51,16 @@ class ElementsShowAndHideMachine {
     });
   }
 
-  checkAndSetSectionsVisibility = async (section, inVievport) => {
+  checkAndSetSectionsVisibility = async (section, styleToChange, inVievport) => {
     await utils.sleep(inVievport ? settings.variables.delayLong : 0);
     section.classList.add(inVievport ? settings.classes.sectionShow : settings.classes.sectionHide)
   }
 
-  checkAndSetDivsVisibility = async (section, opacityStyleToChange, transformStyleToChange, inVievport) => {
-    if (!section.classList.contains('main-carousel')) {
-      const divsIsThisSection = section.querySelectorAll(settings.selectors.allElementsInSection);
-      for (let singleDiv of divsIsThisSection) {
-        await utils.sleep(inVievport ? settings.variables.delayShort : 0);
-        singleDiv.style.opacity = opacityStyleToChange;
-        singleDiv.style.transform = transformStyleToChange;
-      }
+  checkAndSetDivsVisibility = async (section, styleToChange, inVievport) => {
+    const divsIsThisSection = section.querySelectorAll(settings.selectors.allElementsInSection);
+    for (let singleDiv of divsIsThisSection) {
+      await utils.sleep(inVievport ? settings.variables.delayShort : 0);
+      singleDiv.style.opacity = styleToChange;
     }
   }
 
